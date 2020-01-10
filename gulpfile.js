@@ -35,7 +35,7 @@ function watch() {
   gulp.watch("./static/scss/**/*.scss", style);
   gulp.watch("./*.php").on("change", browserSync.reload);
   gulp.watch("./static/js/*.js").on("change", browserSync.reload);
-  gulp.watch("./templates/*.twig").on("change", browserSync.reload);
+  gulp.watch("./templates/**/*.twig").on("change", browserSync.reload);
 }
 
 function imageminTask() {
