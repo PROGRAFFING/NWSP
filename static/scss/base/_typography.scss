@@ -61,13 +61,30 @@ small,
   font-weight: 800;
 }
 
+.t-bold {
+  font-weight: 700;
+}
+.f-extra {
+  font-weight: 800;
+}
+.t-italic {
+  font-style: italic;
+}
 .t-title {
-  font-size: 35px;
+  font-size: 55px;
   text-transform: uppercase;
+  font-family: $main-font;
+  @extend .f-extra;
+  &--small {
+    font-size: 1.1rem;
+  }
 }
 
 p {
   font-size: 18px;
+}
+.t-p--medium {
+  font-size: 1.4rem;
 }
 .t-p--serif {
   font-family: $second-font;
