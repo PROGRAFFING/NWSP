@@ -71,6 +71,19 @@
 					</div>
 				</div>
 			</div>
+
+
+			{# second about row #}
+			<section class="kierunki">
+				<div class="container kierunki__container">
+					<div class="row kierunki__row">
+						{% include "menu-kierunki.twig" with {'items': menu_kierunki.get_items} %}
+					
+					</div>
+				</div>
+			</section>
+			
+
 		</section>
 
 
