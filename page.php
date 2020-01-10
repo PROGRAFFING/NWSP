@@ -23,7 +23,11 @@
 
 $context = Timber::context();
 
+$featured = Timber::get_posts(array('post_type' => 'post', 'category_name' => 'wyroznione', 'posts_per_page' =>  2)); // uses 
+
+
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
+$context['featured'] = $featured;
 
 Timber::render( array( 'pages/page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

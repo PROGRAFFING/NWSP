@@ -198,4 +198,6 @@ function add_to_context( $context ) {
 	$context['main'] = new \Timber\Menu( 'main' );
     return $context;
 }
+
+
 new StarterSite();
