@@ -117,7 +117,7 @@
 										{{ post.title }}
 									</h4>
 								</a>
-								<p class="t-p-serif">{{ post.preview.read_more('<span class="t-link">Czytaj więcej</span>') }}</p>
+								<p class="t-p-serif">{{ post.preview.length(20).force.read_more('<span class="t-link">Czytaj więcej</span>') }}</p>
 							</div>
 						</div>
 					{% endfor %}
@@ -126,8 +126,26 @@
 			</div>
 		</section>
 
+		{# last news #}
+		<section class="posts">
+			<div class="container posts__container">
+				<div class="posts__row-title">
+					<h2 class="section-title posts__heading t-title">
+						Ostatnie wpisy
+					</h2>
+				</div>
+				<div class="posts__row">
+					{%set i = 1 %}
 
-
+					{% for post in posts %}
+						<div class="post__col post__col--{{ i }}">	
+							{{ post.title }}
+						</div>
+						{% set i = i + 1 %}
+					{% endfor %}
+				</div>
+			</div>
+		</section>
 
 	
 {% endblock %}

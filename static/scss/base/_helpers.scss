@@ -52,3 +52,17 @@
 .u-h-100 {
   height: 100%;
 }
+
+.post__col {
+  background: pink;
+  border: 1px solid red;
+}
+
+.posts__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.post__col--1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
