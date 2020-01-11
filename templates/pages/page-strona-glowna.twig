@@ -2,151 +2,167 @@
 
 {% block content %}
 
-		{# hero here #}
-		<section class="home-hero">
-			<div class="hero" style="background: pink">
-				<div class="container hero__container d-flex section-full align-items-center flex-wrap">
-					<div class="hero__row hero__row--text">
-						<h2 class="t-big">
+	{# hero here #}
+	<section class="home-hero">
+		<div class="hero" style="background: pink">
+			<div class="container hero__container d-flex section-full align-items-center flex-wrap">
+				<div class="hero__row hero__row--text">
+					<h2 class="t-big">
 						WYBIERZ WŁASNĄ ŚCIEŻKĘ - DNI OTWARTE</h2>
-						<p class="t-p--serif">Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole</p>
-						<a href="#" class="btn btn--white">Aplikuj do nas <i class="fa fa-external-link" aria-hidden="true"></i></a>
-					</div>
-					<div class="hero__row hero__row--link row w-100 align-self-end">
-						<div class="col-xs-12 col-md-4 align-self-end hero_link-col">
-							<a href="#">
-								<h3>
-									Platforma e-learningowa
-								</h3>	
-							</a>
-						</div>
+					<p class="t-p--serif">Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole</p>
+					<a href="#" class="btn btn--white">Aplikuj do nas
+						<i class="fa fa-external-link" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="hero__row hero__row--link row w-100 align-self-end">
+					<div class="col-xs-12 col-md-4 align-self-end hero_link-col">
+						<a href="#">
+							<h3>
+								Platforma e-learningowa
+							</h3>
+						</a>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		{# first section #}
-		<section class="about-home">
-			<div class="container about">
-				<div class="row about__row">
-					<div class="col-xs-12 col-md-9 about__col about__col--left">
-						<h2 class="section-title about__heading t-title">
-							Nagłówek 1
-						</h2>
-						<div class="row about__inner-row t-p--serif">
-							<div class="col-md-4 about__inner-col">
-								<p class="t-p--medium">Enjoy the right university experience for you at our truly international university campus in Segovia, and our urban center right in the heart of Madrid’s business district.
+	{# first section #}
+	<section class="about-home">
+		<div class="container about">
+			<div class="row about__row">
+				<div class="col-xs-12 col-md-9 about__col about__col--left">
+					<h2 class="section-title about__heading t-title">
+						Nagłówek 1
+					</h2>
+					<div class="row about__inner-row t-p--serif">
+						<div class="col-md-4 about__inner-col">
+							<p class="t-p--medium">Enjoy the right university experience for you at our truly international university campus in Segovia, and our urban center right in the heart of Madrid’s business district.
 								<br>
 								<br>
 								Take a walk through our study rooms, cafeteria, library, the WOW room and other parts of the university!</p>
-								<a href="#" class="t-link">virtual campus tour <i class="fa fa-search" aria-hidden="true"></i></a>
-							</div>
-							<div class="col-md-4 about__inner-col about__inner-col--blog">
-							<img src="{{ theme.path }}/static/img/about.jpg" alt="" class="img-fluid">
-								<h3 class="t-title t-title--small">A true campus experience</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat non dolor malesuada luctus. Duis odio mi, facilisis consectetur ante ac, tristique ultricies sem. Etiam facilisis odio quis nisl laoreet suscipit. Suspendisse justo sapien, ullamcorper at elit quis, imperdiet auctor purus.</p>
-								<a href="#" class="t-link">virtual campus tour <i class="fa fa-search" aria-hidden="true"></i></a>
-							</div>
-							<div class="col-md-4 about__inner-col about__inner-blog">
-							<img src="{{ theme.path }}/static/img/about-2.jpg" alt="" class="img-fluid">
-								<h3 class="t-title t-title--small">A true campus experience</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat non dolor malesuada luctus. Duis odio mi, facilisis consectetur ante ac, tristique ultricies sem. Etiam facilisis odio quis nisl laoreet suscipit. Suspendisse justo sapien, ullamcorper at elit quis, imperdiet auctor purus.</p>
-								<a href="#" class="t-link">virtual campus tour <i class="fa fa-search" aria-hidden="true"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-12 col-md-3 about__col about__col--right text-center">
-						<div class="about__num">
-							<span class="t-big">130+</span>
-							<p class="t-italic">Student nationalites</p>
-						</div>
-						<div class="about__num">
-							<span class="t-big">130+</span>
-							<p class="t-italic">Student nationalites</p>
-						</div>
-							<div class="about__num">
-							<span class="t-big">130+</span>
-							<p class="t-italic">Student nationalites</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-			{# second about row #}
-			<section class="kierunki">
-				<div class="container kierunki__container">
-					<div class="row kierunki__row">
-						{% include "menu-kierunki.twig" with {'items': menu_kierunki.get_items} %}
-					
-					</div>
-				</div>
-			</section>
-			
-
-			<section class="cta cta--big u-gray">
-				<div class="container cta__container">
-					<div class="row cta__container u-white">
-						<h3 class="t-big">
-							Kształtujemy Twoją przyszłość
-						</h3>
-						<p class="t-p--medium t-serif">This series of articles, published in The Economist, focuses on technological and social changes, tracing tomorrow’s corporate, financial, political and media landscapes.</p>
-						<a href="#" class="t-link t-link--white">Shape the future  <i class="fa fa-external-link" aria-hidden="true"></i></a>
-					</div>
-				</div>
-			</section>
-
-		</section>
-
-
-
-
-		{# featured posts #}
-
-		<section class="featured-posts">
-			<div class="container featured__container">
-				<div class="row featured__row">
-					{% for post in featured %}
-						<div class="col-xs-12 col-md-6 featured_col">
-							<a href="{{ post.link }}">
-								<img class="img-fluid" src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}">
+							<a href="#" class="t-link">virtual campus tour
+								<i class="fa fa-search" aria-hidden="true"></i>
 							</a>
-							<div class="featured__heading">
-								<a href="{{ post.link }}">
-									<h4 class="t-title t-title--small">
-										{{ post.title }}
-									</h4>
-								</a>
-								<p class="t-p-serif">{{ post.preview.length(20).force.read_more('<span class="t-link">Czytaj więcej</span>') }}</p>
-							</div>
 						</div>
-					{% endfor %}
+						<div class="col-md-4 about__inner-col about__inner-col--blog">
+							<img src="{{ theme.path }}/static/img/about.jpg" alt="" class="img-fluid">
+							<h3 class="t-title t-title--small">A true campus experience</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat non dolor malesuada luctus. Duis odio mi, facilisis consectetur ante ac, tristique ultricies sem. Etiam facilisis odio quis nisl laoreet suscipit. Suspendisse justo sapien, ullamcorper at elit quis, imperdiet auctor purus.</p>
+							<a href="#" class="t-link">virtual campus tour
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="col-md-4 about__inner-col about__inner-blog">
+							<img src="{{ theme.path }}/static/img/about-2.jpg" alt="" class="img-fluid">
+							<h3 class="t-title t-title--small">A true campus experience</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat non dolor malesuada luctus. Duis odio mi, facilisis consectetur ante ac, tristique ultricies sem. Etiam facilisis odio quis nisl laoreet suscipit. Suspendisse justo sapien, ullamcorper at elit quis, imperdiet auctor purus.</p>
+							<a href="#" class="t-link">virtual campus tour
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-3 about__col about__col--right text-center">
+					<div class="about__num">
+						<span class="t-big">130+</span>
+						<p class="t-italic">Student nationalites</p>
+					</div>
+					<div class="about__num">
+						<span class="t-big">130+</span>
+						<p class="t-italic">Student nationalites</p>
+					</div>
+					<div class="about__num">
+						<span class="t-big">130+</span>
+						<p class="t-italic">Student nationalites</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		{# second about row #}
+		<section class="kierunki">
+			<div class="container kierunki__container">
+				<div class="row kierunki__row">
+					{% include "menu-kierunki.twig" with {'items': menu_kierunki.get_items} %}
 
 				</div>
 			</div>
 		</section>
 
-		{# last news #}
-		<section class="posts">
-			<div class="container posts__container">
-				<div class="posts__row-title">
-					<h2 class="section-title posts__heading t-title">
-						Ostatnie wpisy
-					</h2>
-				</div>
-				<div class="posts__row">
-					{%set i = 1 %}
 
-					{% for post in posts %}
-						<div class="post__col post__col--{{ i }}">	
-							{{ post.title }}
-						</div>
-						{% set i = i + 1 %}
-					{% endfor %}
+		<section class="cta cta--big u-gray">
+			<div class="container cta__container">
+				<div class="row cta__container u-white">
+					<h3 class="t-big">
+						Kształtujemy Twoją przyszłość
+					</h3>
+					<p class="t-p--medium t-serif">This series of articles, published in The Economist, focuses on technological and social changes, tracing tomorrow’s corporate, financial, political and media landscapes.</p>
+					<a href="#" class="t-link t-link--white">Shape the future
+						<i class="fa fa-external-link" aria-hidden="true"></i>
+					</a>
 				</div>
 			</div>
 		</section>
 
-	
+	</section>
+
+
+	{# featured posts #}
+
+	<section class="featured-posts">
+		<div class="container featured__container">
+			<div class="row featured__row">
+				{% for post in featured %}
+					<div class="col-xs-12 col-md-6 featured_col">
+						<a href="{{ post.link }}">
+							<img class="img-fluid" src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}">
+						</a>
+						<div class="featured__heading">
+							<a href="{{ post.link }}">
+								<h4 class="t-title t-title--small">
+									{{ post.title }}
+								</h4>
+							</a>
+							<p class="t-p-serif">{{ post.preview.length(20).force.read_more('<span class="t-link">Czytaj więcej</span>') }}</p>
+						</div>
+					</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</section>
+
+	{# last news #}
+	<section class="posts">
+		<div class="container posts__container">
+			<div class="posts__row-title">
+				<h2 class="section-title posts__heading t-title">
+					Ostatnie wpisy
+				</h2>
+			</div>
+			<div class="posts__row">
+				{%set i = 1 %}
+
+				{% for post in posts %}
+					<div class="post__col post__col--{{ i }}">
+						<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}"></a>
+						<a href="{{ post.link }}">
+							<h3 class="post__title">{{ post.title }}</h3>
+						</a>
+						<p class="post__excerpt">{{post.preview.length(20).force   }}</p>
+
+
+						<span class="post__date">{{ post.date }}</span>
+						<a href="{{ post.category.link }}">{{ post.category }}</a>
+					</div>
+					{% set i = i + 1 %}
+				{% endfor %}
+			</div>
+			<a href="#" class="btn btn--white">Zobacz wszystkie wpisy</a>
+		</div>
+	</section>
+
+
 {% endblock %}
-
