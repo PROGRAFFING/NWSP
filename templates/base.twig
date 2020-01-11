@@ -1,67 +1,62 @@
 {% block html_head_container %}
 
-{% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
-	</head>
-{% endblock %}
+	{% include 'html-header.twig' %}
+	{% block head %}{% endblock %}
+</head>{% endblock %}<body class="{{body_class}}" data-template="base.twig">
+<header class="header">
+	<div class="header--top">
+		<div class="container header__container u-h-100">
+			<div class="row header__row align-items-center u-h-100">
 
-	<body class="{{body_class}}" data-template="base.twig"> 
-		<header class="header" >
-			<div class="container header__container" >
-				<div class="header--top">
-					<div class="row header__row">
-					{% block topheader %}
-							<div class="col-md-4 logo">
-								<a href="{{ theme.link }}">Logo</a>
-							</div>
-							<div class="col-md-8 accessibility d-flex">
-								<div class="accessibility__menu ml-auto">
-									<a href="#" class="btn-btn--white">Wirtualny dziekanat</a>
-									<a href="#" class="btn-btn--white">Platforma e-learningowa</a>
-									<a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-								</div>
-							</div>
 
-						</div>	
-					
-					
-					{% endblock %}
+				{% block topheader %}
+					<div class="col-md-4 logo">
+						<a href="{{ theme.link }}">Logo</a>
+					</div>
+					<div class="col-md-8 accessibility d-flex  u-white">
+
+						<div class="accessibility__menu ml-auto">
+							<a href="#" class="btn btn--small btn--white">
+								<span class="btn__inner">Wirtualny
+									<br>dziekanat</span>
+							</a>
+							<a href="#" class="btn btn--small btn--white">
+								<span class="btn__inner">Platforma
+									<br>
+									e-learningowa</span>
+							</a>
+
+							<a href="#" class="header__search">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
 
 				</div>
-			</div>
-		</header>
-
-		<section id="content" role="main" class="content-wrapper">
-
-								{% block content %}
-						<div class="wrapper">
-							<h1 class="hdr-logo" role="banner">
-								<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-							</h1>
-
-		
-		
-		
-							<nav id="nav-main" class="nav-main" role="navigation">
-								{% include "menu.twig" with {'items': menu.get_items} %}
-							</nav><!-- #nav -->
-						</div>
-					{% endblock %}
-		</section>
 
 
+			{% endblock %}
+
+		</div>
+	</div>
+	<div class="container nav__container">
+		<nav id="nav-main" class="nav-main" role="navigation">
+			{% include "menu.twig" with {'items': menu.get_items} %}
+		</nav>
+
+	</div>
+</header>
+
+<section id="content" role="main" class="content-wrapper"> {% block content %}{% endblock %}
+	</section>
 
 
-
-		{% block footer %}
-			<footer id="footer">
-				{% include 'footer.twig' %}
-			</footer>
-
+	{% block footer %}
+		<footer id="footer">
+			{% include 'footer.twig' %}
+		</footer>
 
 
-			{{ function('wp_footer') }}
-		{% endblock %}
-	</body>
-</html>
+		{{ function('wp_footer') }}
+	{% endblock %}
+</body></html>

@@ -1,3 +1,134 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+
+
+.footer {
+    background: $main-c;
+}
+
+.footer--top {
+    padding: 50px 0;
+    color: #fff;
+
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: 50px;
+
+    }
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+
+}
+
+.list__item {
+    margin-bottom: 16px;
+}
+
+.list__link {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 13px;
+    color: #fff;
+    transition: $transition;
+
+    i {
+        margin-left: 5px;
+        transition: $transition;
+    }
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.7;
+
+        i {
+            transform: translateX(5px)
+        }
+    }
+}
+
+
+.footer--bottom {
+    padding: 50px 0;
+    background: $main-c;
+
+    .nav__list {
+        flex-direction: row;
+        padding: 0;
+
+        li {
+            position: relative;
+            margin: 0 20px 0 0;
+
+            &:after {
+                content: "|";
+                position: absolute;
+                right: -11px;
+                top: 0;
+                color: #fff;
+                opacity: .4;
+            }
+
+            a {
+                text-transform: none;
+                font-size: 12px;
+                font-family: $second-font;
+            }
+        }
+    }
+}
+
+.footer__socials-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.copyright {
+    margin-top: 50px;
+    color: #fff;
+
+    span {
+        opacity: 0.2;
+        font-size: 12px;
+
+    }
+
+    img {
+        margin-left: 10px;
+    }
+}
+
+.footer__socials-list {
+    margin-top: 40px;
+    display: flex;
+
+    li {
+        margin-right: 30px;
+
+        a {
+            color: #fff;
+            font-size: 24px;
+        }
+    }
+}
+
+.footer__col--right {
+    a {
+        color: #fff;
+
+    }
+}

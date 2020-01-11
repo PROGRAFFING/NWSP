@@ -1,3 +1,57 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.header {
+    // position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header--top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: $main-c;
+    height: 80px;
+    z-index: 9;
+}
+
+.accessibility {
+    .btn {
+        margin-left: 5px;
+    }
+}
+
+.header__search {
+    color: #fff;
+
+    margin-left: 10px;
+
+}
+
+.nav__container {
+    margin-top: 80px;
+}
+
+.nav__list {
+    flex-direction: row-reverse;
+    display: flex;
+    list-style-type: none;
+
+    li {
+        margin-left: 10px;
+    }
+}
+
+.menu__link {
+
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

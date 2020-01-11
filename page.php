@@ -34,8 +34,8 @@ $context['featured'] = $featured;
 $argsQuery = array(
     'posts_per_page'   => 6,
     'post_type'        => 'posts',
-    'category__not_in' =>  4,
+    'category__not_in' =>  2,
 );
-$context['posts'] = Timber::get_posts(array('post_type' => 'post', 'posts_per_page' =>  6, 'category__not_in' => 4));
+$context['posts'] = Timber::get_posts(array('post_type' => 'post', 'posts_per_page' =>  6, 'category__not_in' => 2));
 
 Timber::render( array( 'pages/page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

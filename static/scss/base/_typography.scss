@@ -3,7 +3,9 @@
  */
 html {
   font-size: 100%;
-} /*16px*/
+}
+
+/*16px*/
 
 body {
   color: $text-color;
@@ -64,28 +66,70 @@ small,
 .t-bold {
   font-weight: 700;
 }
-.f-extra {
+
+.t-extra {
   font-weight: 800;
 }
+
 .t-italic {
   font-style: italic;
 }
+
 .t-title {
   font-size: 55px;
   text-transform: uppercase;
   font-family: $main-font;
-  @extend .f-extra;
+  @extend .t-extra;
+
   &--small {
     font-size: 1.1rem;
   }
 }
 
 p {
-  font-size: 18px;
+
+
+  font-size: 1.1rem;
+
 }
+
 .t-p--medium {
   font-size: 1.4rem;
 }
+
 .t-p--serif {
   font-family: $second-font;
+}
+
+
+.t-link {
+  color: $main-c;
+  font-weight: 800;
+  font-family: $main-font;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: $transition;
+
+  &--white {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    i {
+      transform: translateX(5px);
+
+    }
+  }
+
+  i {
+    margin-left: 5px;
+    transition: $transition;
+  }
 }
