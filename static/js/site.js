@@ -7,4 +7,11 @@ jQuery(document).ready(function ($) {
     slidesToShow: 1,
 
   });
+  $('.cta__slider-wrapper').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+
+  });
 });
