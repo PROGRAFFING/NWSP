@@ -39,24 +39,24 @@
 
 		</div>
 	</div>
-	<div class="container nav__container">
-		<nav id="nav-main" class="nav-main" role="navigation">
-			{% include "menu.twig" with {'items': menu.get_items} %}
+	<div class="nav__container">
+		<div class="nav-background"></div>
+
+		<div class="logo__wrapper">
+			<a href="{{ theme.link }}">
+				<img src="{{ theme.path }}/static/img/logo-NWSP.png" alt="NWSP Logo">
+			</a>
+		</div>
+		<nav
+			id="nav-main" class="nav-main" role="navigation">
+			{# {% include "menu.twig" with {'items': menu.get_items} %} #}
+			{{ function('do_shortcode', '[maxmegamenu location=max_mega_menu_1]') }}
 		</nav>
-
 	</div>
-</header>
-
-<section id="content" role="main" class="content-wrapper"> {% block content %}{% endblock %}
-	</section>
-
-
-	{% block footer %}
-		<footer id="footer">
-			{% include 'footer.twig' %}
-		</footer>
+</div></body></header><section id="content" role="main" class="content-wrapper"> {% block content %}{% endblock %}</section>{% block footer %}
+<footer id="footer">
+	{% include 'footer.twig' %}
+</footer>
 
 
-		{{ function('wp_footer') }}
-	{% endblock %}
-</body></html>
+{{ function('wp_footer') }}{% endblock %}</body></html>

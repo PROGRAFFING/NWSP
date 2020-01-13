@@ -186,7 +186,6 @@ function nwsp_files()
 add_action('wp_enqueue_scripts', 'nwsp_files');
 
 
-
 add_filter( 'timber/context', 'add_to_context' );
 
 function add_to_context( $context ) {
@@ -195,7 +194,7 @@ function add_to_context( $context ) {
 
     // Now, in similar fashion, you add a Timber Menu and send it along to the context.
     $context['menu_kierunki'] = new \Timber\Menu( 'kierunki' );
-	$context['main'] = new \Timber\Menu( 'main' );
+	$context['main'] = new \Timber\Menu( 'glowne' );
     return $context;
 }
 
