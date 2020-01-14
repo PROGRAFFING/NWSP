@@ -25,6 +25,34 @@
 
 }
 
+
+
+.wpsm_number {
+
+    .counter {
+        font-family: $main-font;
+        @extend .t-big;
+
+        &:after {
+            content: '+';
+            color: #fff;
+        }
+    }
+}
+
+.wpsm_count-title {
+    font-family: $main-font !important;
+    @extend .t-italic;
+}
+
+
+
+
+
+
+
+
+
 .cta__container {
     padding: 250px 80px 80px;
     position: relative;

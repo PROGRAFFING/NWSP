@@ -100,4 +100,12 @@
 
         }
     }
+
+    &--accent-solid {
+        background: $main-c;
+
+        &:hover {
+            color: $text-color !important;
+        }
+    }
 }

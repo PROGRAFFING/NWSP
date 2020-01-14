@@ -1,18 +1,59 @@
-<nav>
-    <ul class="nav-main">
-        {% for item in menu_kierunki.items %}
-            <li class="nav-main-item {{ item.classes|join(' ') }}">
-                <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
-                {% if item.children %}
-                    <ul class="nav-drop">
-                        {% for child in item.children %}
-                            <li class="nav-drop-item">
-                                <a href="{{ child.link }}">{{ child.title }}, {{ child.master_object.content }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
-</nav>
+<ul class="kierunki__nav">
+	<div class="kierunki__sub-bg"></div>
+	{% for item in menu_kierunki.items %}
+
+		<div class="kierunki__single">
+			<div class="kierunki__bg" style="background: url({{ item.master_object.thumbnail }}) center / cover "></div>
+
+			<li class="kierunki__item {{ item.classes|join(' ') }}">
+				<a class="kierunki__link" href="{{ item.link }}">{{ item.title }}</a>
+				{% if item.children %}
+					<div class="kierunki__sub-wrapper">
+						<ul class="kierunki__sub">
+							{% for child in item.children %}
+								{# {{ dump( child.master_object)}} #}
+								<li class="kierunki__sub-item">
+
+									<a class="kierunki__sub-link" href="{{ child.link }}">{{ child.title }}</a>
+
+									<div class="kierunki__details-wrapper">
+										<div class="kierunki__details">
+											<div class="kierunek__img-wrapper" style="background: url('{{ Image(child.master_object.kierunek_img )}}') center / cover"></div>
+											<p class="kierunek__desc">{{ child.master_object.kierunek_desc }}</p>
+											<div class="kerunkek__info-wrapper">
+												<div class="kierunek__info">
+													<p class="kierunek__info-heading t-extra">Czas</p>
+													<p class="kierunek__info-text">{{ child.master_object.kierunek_time }}</p>
+												</div>
+
+												<div class="kierunek__info">
+													<p class="kierunek__info-heading t-extra">Język</p>
+													<p class="kierunek__info-text">{{ child.master_object.kierunek_lang }}</p>
+												</div>
+
+												<div class="kierunek__info">
+													<p class="kierunek__info-heading t-extra">Lokalizacja</p>
+													<p class="kierunek__info-text">{{ child.master_object.kierunek_localization }}</p>
+												</div>
+
+												<div class="kierunek__info">
+													<p class="kierunek__info-heading t-extra">Rozpoczęcie</p>
+													<p class="kierunek__info-text">{{ child.master_object.kierunek_month }}</p>
+												</div>
+											</div>
+											<a href="{{ child.link }}" class="btn btn--accent-solid">Więcej</a>
+
+
+										</div>
+
+									</div>
+
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endif %}
+			</li>
+		</div>
+	{% endfor %}
+</ul>

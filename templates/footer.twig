@@ -1,4 +1,4 @@
-<div class="footer footer--top">
+<div class="footer footer--top" data-aos="fade-down-short" data-aos-duration="1000">
 	<div class="container">
 		<div class="footer__title-row">
 			<h3 class="t-3 t-extra">
@@ -70,7 +70,7 @@
 
 	<div class="container ">
 		<nav id="footer-nav" class="footer-nav" role="navigation">
-			{% include "menu.twig" with {'items': menu.get_items} %}
+			{% include "menu.twig" with {'items': menu_footer.get_items} %}
 		</nav>
 		<div class="footer__socials-row">
 			<div class="footer__col footer__col--left">

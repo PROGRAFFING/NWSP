@@ -1,8 +1,14 @@
+AOS.init({
+  delay: 200,
+  duration: 1000,
+  once: true
+});
+
+const $ = jQuery;
 jQuery(document).ready(function($) {
   // Your JavaScript goes here
   $(".hero__container").slick({
     dots: false,
-
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
@@ -60,3 +66,25 @@ jQuery(document).ready(function($) {
     });
   });
 });
+
+$(".kierunki__single").each(function(e) {
+  $(this).hover(hoverIn, hoverOut);
+});
+
+function hoverIn() {
+  $(this)
+    .find(".kierunki__bg")
+    .css({
+      opacity: 1,
+      visibility: "visible"
+    });
+}
+
+function hoverOut() {
+  $(this)
+    .find(".kierunki__bg")
+    .css({
+      opacity: 0,
+      visibility: "hidden"
+    });
+}

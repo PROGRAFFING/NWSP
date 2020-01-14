@@ -43,7 +43,7 @@
 
 			</div>
 			<div class="container hero__link-container">
-				<div class="hero__link-col">
+				<div class="hero__link-col" data-aos="fade-in">
 					<a href="#" class="hero__link">
 						<h3 class="t-4 t-extra">
 							Platforma e-learningowa
@@ -60,11 +60,11 @@
 		<div class="container about">
 			<div class="row about__row">
 				<div class="col-xs-12 col-md-9 about__col about__col--left">
-					<h2 class="section-title about__heading t-title">
+					<h2 class="section-title about__heading t-title" data-aos="fade-down-short" data-aos-duration="1000">
 						Nagłówek 1
 					</h2>
 					<div class="row about__inner-row t-p--serif">
-						<div class="col-lg-12 col-xl-4 about__inner-col">
+						<div class="col-lg-12 col-xl-4 about__inner-col" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="500">
 							<p class="t-p--medium">Enjoy the right university experience for you at our truly international university campus in Segovia, and our urban center right in the heart of Madrid’s business district.
 								<br>
 								<br>
@@ -73,7 +73,7 @@
 								<i class="fa fa-search" aria-hidden="true"></i>
 							</a>
 						</div>
-						<div class="col-lg-6 col-xl-4 about__inner-col about__inner-col--blog">
+						<div class="col-lg-6 col-xl-4 about__inner-col about__inner-col--blog" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="1000">
 							<img src="{{ theme.path }}/static/img/about.jpg" alt="" class="img-fluid">
 							<h3 class="t-title t-title--small">A true campus experience</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur placerat non dolor malesuada luctus. Duis odio mi, facilisis consectetur ante ac, tristique ultricies sem. Etiam facilisis odio quis nisl laoreet suscipit. Suspendisse justo sapien, ullamcorper at elit quis, imperdiet auctor purus.</p>
@@ -81,7 +81,7 @@
 								<i class="fa fa-search" aria-hidden="true"></i>
 							</a>
 						</div>
-						<div class="col-lg-6 col-xl-4 about__inner-col about__inner-blog">
+						<div class="col-lg-6 col-xl-4 about__inner-col about__inner-blog" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="1000">
 
 							<img src="{{ theme.path }}/static/img/about-2.jpg" alt="" class="img-fluid">
 							<h3 class="t-title t-title--small">A true campus experience</h3>
@@ -92,20 +92,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-3 about__col about__col--right text-center">
+				<div class="col-xs-12 col-md-3 about__col about__col--right text-center " data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="250">
 					{{ function('do_shortcode', '[COUNTER_NUMBER id=211]') }}
-					<div class="about__num">
-						<span class="t-big">130+</span>
-						<p class="t-italic">Student nationalites</p>
-					</div>
-					<div class="about__num">
-						<span class="t-big">130+</span>
-						<p class="t-italic">Student nationalites</p>
-					</div>
-					<div class="about__num">
-						<span class="t-big">130+</span>
-						<p class="t-italic">Student nationalites</p>
-					</div>
+
 				</div>
 			</div>
 		</div>
@@ -114,16 +103,19 @@
 		{# second about row #}
 		<section class="kierunki">
 			<div class="container kierunki__container">
-				<div class="row kierunki__row">
+				<h2 class="section-title about__heading t-title" data-aos="fade-down-short" data-aos-duration="1000">
+					Nasze Kierunki
+				</h2>
+				<div class="row kierunki__row" data-aos="fade-down-short" data-aos-duration="1000">
 					{% include "menu-kierunki.twig" with {'items': menu_kierunki.get_items} %}
-
+					<div class="kierunki__img" style="background: url({{ theme.path }}/static/img/study.jpg) center/cover "></div>
 				</div>
 			</div>
 		</section>
 
 
 		<section class="cta cta--big u-gray">
-			<div class="container cta__container">
+			<div class="container cta__container" data-aos="fade-down-short" data-aos-duration="1000">
 
 				<a href="#" class="cta-link">
 					<img src="https://static-frm.ie.edu/university/wp-content/uploads/sites/6/2016/02/ie-university-banner.jpg" alt="">
@@ -148,7 +140,7 @@
 
 	<section class="featured-posts u-gray">
 
-		<div class="container featured__container">
+		<div class="container featured__container" data-aos="fade-down-short" data-aos-duration="1000">
 			<div class="row featured__row">
 				{% for post in featured %}
 					<div class="col-xs-12 col-md-6 featured_col">
@@ -180,9 +172,10 @@
 			</div>
 			<div class="posts__row">
 				{%set i = 1 %}
+				{%set delay = 0 %}
 
 				{% for post in posts %}
-					<div class="post__col post__col--{{ i }}">
+					<div class="post__col post__col--{{ i }}" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="{{ delay }}">
 						<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="img-fluid"></a>
 						<a href="{{ post.link }}">
 							<h3 class="post__title t-title t-title--small">{{ post.title }}</h3>
@@ -193,6 +186,7 @@
 						<span class="post__date">{{ post.date }}</span>
 						<a class="post__cat" href="{{ post.category.link }}">{{ post.category }}</a>
 					</div>
+					{% set delay = delay + 300 %}
 					{% set i = i + 1 %}
 				{% endfor %}
 			</div>
@@ -205,7 +199,7 @@
 
 
 	<section class="cta__slider">
-		<div class="cta__slider-wrapper">
+		<div class="cta__slider-wrapper" data-aos="fade-down-short" data-aos-duration="1000">
 
 			<div class="slide slide--cta">
 				<img src="https://images.unsplash.com/photo-1571942602643-ba8953c07e5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2020&q=80" alt="">
@@ -237,7 +231,7 @@
 	</section>
 
 	<section class="blog__cta">
-		<div class="container">
+		<div class="container" data-aos="fade-down-short" data-aos-duration="1000">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 offset-md-3 text-center">
 					<i class="fa fa-rocket" aria-hidden="true"></i>
@@ -255,7 +249,7 @@
 	</section>
 
 	<section class="discover">
-		<div class="container discover__container">
+		<div class="container discover__container" data-aos="fade-down-short" data-aos-duration="1000">
 			<div class="row discover__row">
 				<div class="col-md-3 discover__col">
 					<h2 class="t-title">Odkryj więcej</h2>
