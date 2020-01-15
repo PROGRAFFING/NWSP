@@ -63,7 +63,6 @@
   overflow-x: hidden;
 }
 
-
 [data-aos="fade-down-short"] {
   opacity: 0;
   transition-property: transform, opacity;
@@ -79,4 +78,18 @@
       transform: translateY(0);
     }
   }
+}
+
+// add breakpoint
+@include mq-add-breakpoint(large, 1920px);
+
+.accessibility-font {
+  /* First font-size fallback to older browsers */
+  font-size: 1.25em;
+  font-size: 1.25rem;
+}
+
+.accessibility-contrast {
+  color: #fff;
+  background: #000;
 }

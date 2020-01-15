@@ -3,7 +3,6 @@
     height: 100vh;
 }
 
-
 .hero,
 .slick-track {
     height: 100%;
@@ -12,6 +11,7 @@
 
 .hero__item {
     position: relative;
+    height: 100vh;
 
     &:after {
         @include overlay;
@@ -23,13 +23,6 @@
     align-items: center;
 }
 
-.hero__img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
 
 .hero__row {
     position: relative;
@@ -41,13 +34,7 @@
     overflow: hidden;
     color: #fff;
 
-    .t-big,
-    p,
-    a {
-        opacity: 0;
-        transform: translateX(-250px);
-        transition: $transition;
-    }
+
 
     .btn {
         margin-top: 20px;
@@ -78,13 +65,23 @@
 }
 
 .hero__link-col {
-    background: url("https://static-frm.ie.edu/university/wp-content/uploads/sites/6/2016/02/Open-House-500x420.jpg") center center/cover no-repeat;
     width: 30%;
     padding: 10px 20px;
     position: absolute;
     right: 0;
     bottom: 0;
     height: 250px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+    }
 
     * {
         color: #fff;

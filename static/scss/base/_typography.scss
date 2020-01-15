@@ -58,7 +58,7 @@ small,
 }
 
 .t-big {
-  font-size: 5.46875vw;
+  font-size: 6rem;
   line-height: 1.2;
   font-weight: 800;
 }
@@ -76,7 +76,7 @@ small,
 }
 
 .t-title {
-  font-size: 55px;
+  font-size: 3.4rem;
   text-transform: uppercase;
   font-family: $main-font;
   @extend .t-extra;
@@ -87,10 +87,7 @@ small,
 }
 
 p {
-
-
   font-size: 1.1rem;
-
 }
 
 .t-p--medium {
@@ -100,7 +97,6 @@ p {
 .t-p--serif {
   font-family: $second-font;
 }
-
 
 .t-link {
   color: $main-c;
@@ -124,7 +120,6 @@ p {
 
     i {
       transform: translateX(5px);
-
     }
   }
 

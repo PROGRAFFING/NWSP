@@ -13,6 +13,7 @@
     padding: 0;
     margin: 0;
 
+    border-radius: 5px 0 0 5px;
 
 
     li:hover {
@@ -53,7 +54,7 @@
         position: relative;
         display: block;
         width: 100%;
-        padding: 26px 20px;
+        padding: 26px 40px 26px 20px;
         color: $text-color;
 
         &:after {
@@ -154,6 +155,7 @@
     min-height: 550px;
     width: 70%;
     box-shadow: 1px 1px 0 0 #ccc;
+    border-radius: 0 3px 3px 0;
 }
 
 .kierunki__bg {
@@ -168,6 +170,7 @@
     background-position: 50%;
     z-index: 1;
     box-shadow: 1px 1px 0 0 #ccc;
+    border-radius: 0 3px 3px 0;
     // transition: all 0.4s ease-in-out;
 }
 

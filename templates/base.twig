@@ -2,7 +2,14 @@
 
 	{% include 'html-header.twig' %}
 	{% block head %}{% endblock %}
-</head>{% endblock %}<body class="{{body_class}}" data-template="base.twig">
+</head>{% endblock %}<body
+class="{{body_class}}" data-template="base.twig">
+{# <form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+	<div>
+		<input type="text" size="18" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s"/>
+		<input type="submit" id="searchsubmit" value="Search" class="btn"/>
+	</div>
+</form> #}
 <header class="header">
 	<div class="header--top">
 		<div class="container header__container u-h-100">
@@ -10,12 +17,36 @@
 
 
 				{% block topheader %}
-					<div class="col-md-4 logo">
-						<a href="{{ theme.link }}">Logo</a>
-					</div>
-					<div class="col-md-8 accessibility d-flex  u-white">
+					<div class="col-md-4">
+						<ul class="list header__socials-list">
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-instagram" aria-hidden="true"></i>
+								</a>
+							</li>
 
-						<div class="accessibility__menu ml-auto">
+							<li>
+								<a href="#">
+									<i class="fa fa-youtube" aria-hidden="true"></i>
+								</a>
+							</li>
+
+
+						</ul>
+					</div>
+					<div class="col-md-8 accessibility   u-white">
+
+						<div class="accessibility__menu">
+							<div class="accessibility-wrapper" id="accessibility-wrapper">
+								{{ function('do_shortcode', '[zeno_font_resizer]') }}
+
+							</div>
+
 							<a href="#" class="btn btn--small btn--white">
 								<span class="btn__inner">Wirtualny
 									<br>dziekanat</span>
@@ -41,14 +72,15 @@
 	</div>
 	<div class="nav__container">
 		<div class="nav-background"></div>
-
 		<div class="logo__wrapper">
-			<a href="{{ theme.link }}">
+			<a href="{{ site.url }}">
 				<img src="{{ theme.path }}/static/img/logo-NWSP.png" alt="NWSP Logo">
 			</a>
 		</div>
+
 		<nav
 			id="nav-main" class="nav-main" role="navigation">
+
 			{# {% include "menu.twig" with {'items': menu.get_items} %} #}
 			{{ function('do_shortcode', '[maxmegamenu location=max_mega_menu_1]') }}
 		</nav>

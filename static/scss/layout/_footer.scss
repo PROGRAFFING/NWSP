@@ -82,6 +82,10 @@
                 opacity: .4;
             }
 
+            &:last-child:after {
+                content: '';
+            }
+
             a {
                 text-transform: none;
                 font-size: 12px;
@@ -138,4 +142,10 @@
         color: #fff;
 
     }
+}
+
+.footer__logo {
+    display: block;
+    width: 100px;
+    height: 50px;
 }

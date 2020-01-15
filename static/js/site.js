@@ -3,16 +3,44 @@ AOS.init({
   duration: 1000,
   once: true
 });
+function ready(fn) {
+  if (document.readyState !== "loading") {
+    fn();
+  } else {
+    document.addEventListener("DOMContentLoaded", fn);
+  }
+}
+
+ready(function() {
+  accessibilityButtons({
+    font: {
+      nameButtonIncrease: "+A", // Default
+      ariaLabelButtonIncrease: "Increase Font", // Default
+      nameButtonDecrease: "-A", // Default
+      ariaLabelButtonDecrease: "Decrease Font" // Default
+    },
+
+    contrast: {
+      nameButtonAdd: "Add Contrast", // Default
+      ariaLabelButtonAdd: "Add Contrast", // Default
+      nameButtonRemove: "Remove Contrast", // Default
+      ariaLabelButtonRemove: "Remove Contrast" // Default
+    }
+  });
+});
 
 const $ = jQuery;
 jQuery(document).ready(function($) {
+  // accessibility  buttons
+
   // Your JavaScript goes here
   $(".hero__container").slick({
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 1,
-    cssEase: "cubic-bezier(.89,0,.34,.86)"
+    slidesToShow: 1
+    // lazyLoad: "progressive",
+    // cssEase: "cubic-bezier(.89,0,.34,.86)"
   });
 
   jQuery(".cta__slider-wrapper").slick({
@@ -27,25 +55,6 @@ jQuery(document).ready(function($) {
       $(".header").addClass("fixed");
     } else {
       $(".header").removeClass("fixed");
-    }
-  });
-
-  jQuery(".hero__container").on("beforeChange", function(
-    event,
-    slick,
-    currentSlide,
-    nextSlide
-  ) {
-    if (Math.abs(nextSlide - currentSlide) == 1) {
-      direction =
-        nextSlide - currentSlide > 0
-          ? console.log("right")
-          : console.log("left");
-    } else {
-      direction =
-        nextSlide - currentSlide > 0
-          ? console.log("left")
-          : console.log("right");
     }
   });
 
@@ -88,3 +97,29 @@ function hoverOut() {
       visibility: "hidden"
     });
 }
+
+// const magicLine = document.createElement("li");
+// magicLine.classList.add("magic__line");
+// document.querySelector("#mega-menu-max_mega_menu_1").appendChild(magicLine);
+
+// const menuItems = document.querySelectorAll(
+//   "#mega-menu-max_mega_menu_1 .mega-menu-item"
+// );
+
+// menuItems.forEach(item => {
+//   item.addEventListener("mouseover", e => {
+//     let currentItem = item.getBoundingClientRect();
+//     const magicLine = document.querySelector(".magic__line");
+//     const directions = {
+//       width: currentItem.width,
+//       left: currentItem.left,
+//       top: currentItem.top,
+//       correct: currentItem.left - 160
+//     };
+//     console.log(
+//       `To dlugosc${directions.top},    od lewej: ${directions.left},    od lewej - dlugosc ${directions.correct} `
+//     );
+//     magicLine.style.setProperty("left", `${directions.correct}px`);
+//     magicLine.style.setProperty("width", `${directions.width}px`);
+//   });
+// });
