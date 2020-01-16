@@ -3,6 +3,7 @@ AOS.init({
   duration: 1000,
   once: true
 });
+
 function ready(fn) {
   if (document.readyState !== "loading") {
     fn();
@@ -33,6 +34,18 @@ const $ = jQuery;
 jQuery(document).ready(function($) {
   // accessibility  buttons
 
+  // let initialSrc = "/wp-content/themes/NWSP/static/img/logo-white.png";
+  // let scrollSrc = "/wp-content/themes/NWSP/static/img/logo-black.png";
+
+  // $(".nav__container").hover(
+  //   function() {
+  //     $(".logo__wrapper img").attr("src", scrollSrc);
+  //   },
+  //   function() {
+  //     $(".logo__wrapper img").attr("src", initialSrc);
+  //   }
+  // );
+
   // Your JavaScript goes here
   $(".hero__container").slick({
     dots: false,
@@ -53,8 +66,10 @@ jQuery(document).ready(function($) {
   $(window).bind("scroll", function() {
     if ($(window).scrollTop() > 60) {
       $(".header").addClass("fixed");
+      $(".logo__wrapper img").attr("src", scrollSrc);
     } else {
       $(".header").removeClass("fixed");
+      $(".logo__wrapper img").attr("src", initialSrc);
     }
   });
 

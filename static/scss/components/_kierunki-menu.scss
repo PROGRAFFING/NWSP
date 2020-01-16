@@ -31,6 +31,12 @@
         opacity: 1;
         visibility: visible;
     }
+
+    &:last-child {
+        .kierunki__item {
+            box-shadow: none;
+        }
+    }
 }
 
 .kierunki__item {
@@ -38,6 +44,7 @@
     font-weight: 800;
     text-transform: uppercase;
     box-shadow: 1px 1px 0 0 #ccc;
+
 
     &:hover {
 

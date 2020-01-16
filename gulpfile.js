@@ -41,7 +41,13 @@ function watch() {
 function imageminTask() {
   gulp
     .src("./static/img/*")
-    .pipe(imagemin())
+    .pipe(
+      imagemin({
+        interlaced: true,
+        progressive: true,
+        optimizationLevel: 5
+      })
+    )
     .pipe(gulp.dest("./dist/images"));
 }
 

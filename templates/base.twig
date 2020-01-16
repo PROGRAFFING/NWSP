@@ -10,7 +10,7 @@ class="{{body_class}}" data-template="base.twig">
 		<input type="submit" id="searchsubmit" value="Search" class="btn"/>
 	</div>
 </form> #}
-<header class="header">
+<header class="header" id="header">
 	<div class="header--top">
 		<div class="container header__container u-h-100">
 			<div class="row header__row align-items-center u-h-100">
@@ -29,13 +29,6 @@ class="{{body_class}}" data-template="base.twig">
 									<i class="fa fa-instagram" aria-hidden="true"></i>
 								</a>
 							</li>
-
-							<li>
-								<a href="#">
-									<i class="fa fa-youtube" aria-hidden="true"></i>
-								</a>
-							</li>
-
 
 						</ul>
 					</div>
@@ -70,13 +63,17 @@ class="{{body_class}}" data-template="base.twig">
 
 		</div>
 	</div>
-	<div class="nav__container">
-		<div class="nav-background"></div>
+	<div class="container logo__container">
 		<div class="logo__wrapper">
 			<a href="{{ site.url }}">
-				<img src="{{ theme.path }}/static/img/logo-NWSP.png" alt="NWSP Logo">
+				<img src="{{ theme.path }}/static/img/logo-white.png" alt="NWSP Logo" class="logo__white">
+				<img src="{{ theme.path }}/static/img/logo-black.png" alt="NWSP Logo" class="logo__black">
 			</a>
 		</div>
+
+	</div>
+	<div class="nav__container">
+		<div class="nav-background"></div>
 
 		<nav
 			id="nav-main" class="nav-main" role="navigation">

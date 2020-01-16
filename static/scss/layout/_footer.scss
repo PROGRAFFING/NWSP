@@ -3,6 +3,12 @@
 // -----------------------------------------------------------------------------
 
 
+.map {
+    position: relative;
+    // top: 6px;
+    overflow: hidden;
+    margin-bottom: -10px;
+}
 
 .footer {
     background: $main-c;
@@ -68,6 +74,7 @@
         // flex-direction: row;
         display: flex;
         padding: 0;
+        list-style-type: none;
 
         li {
             position: relative;
@@ -89,7 +96,6 @@
             a {
                 text-transform: none;
                 font-size: 12px;
-                font-family: $second-font;
                 border-bottom: 1px solid transparent;
 
                 &:hover {
@@ -113,7 +119,7 @@
     color: #fff;
 
     span {
-        opacity: 0.2;
+        opacity: 0.8;
         font-size: 12px;
 
     }
@@ -138,6 +144,9 @@
 }
 
 .footer__col--right {
+    display: flex;
+    align-items: center;
+
     a {
         color: #fff;
 
@@ -147,5 +156,17 @@
 .footer__logo {
     display: block;
     width: 100px;
-    height: 50px;
+
+    img {
+        width: 70px;
+    }
+
+    // height: 50px;
+    &--svg {
+        img {
+
+            width: 100px;
+        }
+
+    }
 }

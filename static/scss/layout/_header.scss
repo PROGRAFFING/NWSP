@@ -8,6 +8,18 @@
   left: 0;
   width: 100%;
   z-index: 999;
+
+  &:hover {
+    .nav__container {
+
+      background: #fff;
+    }
+
+    #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1>li.mega-menu-item.mega-current-menu-item>a.mega-menu-link,
+    #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1>li.mega-menu-item>a.mega-menu-link {
+      color: $text-color;
+    }
+  }
 }
 
 .header--top {
@@ -25,10 +37,11 @@
   display: flex;
 
   li {
-    margin-right: 10px;
+    margin-right: 16px;
   }
 
   a {
+    font-size: 22px;
     color: #fff;
   }
 }
@@ -82,9 +95,10 @@
     height: 60px;
 
     img {
-      width: 50px;
+      width: 80%;
     }
   }
+
 
   #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 {
     height: 60px;
@@ -223,14 +237,7 @@
   margin: 0 auto;
   transition: all 400ms ease-in;
 
-  &:hover {
-    background: #fff;
 
-    #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1>li.mega-menu-item.mega-current-menu-item>a.mega-menu-link,
-    #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1>li.mega-menu-item>a.mega-menu-link {
-      color: $text-color;
-    }
-  }
 }
 
 .mega-has-child {
@@ -274,20 +281,21 @@
   height: 0;
   background: #fff;
   transition: all 400ms ease-in;
-  box-shadow: 1px 0 5px 0 rgba(0, 0, 0, 0.25);
+  // box-shadow: 1px 0 5px 0 rgba(0, 0, 0, 0.25);
 }
 
 .logo__wrapper {
   position: absolute;
-  // width: 1600px;
-  left: 8%;
+  width: 400px;
+  top: 60px;
   height: 100px;
+  left: 15px;
   display: flex;
   align-items: center;
   z-index: 999999;
 
   img {
-    width: 80px;
+    width: 100%;
     transition: all 0.4s ease-in-out;
   }
 }
@@ -333,3 +341,50 @@
 //     padding-left: 2px;
 //   }
 // }
+.logo__wrapper {
+  img {
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.logo__black {
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+#header:hover {
+  .logo__black {
+    opacity: 1;
+    visibility: visible;
+
+  }
+
+  .logo__white {
+    opacity: 0;
+    visibility: hidden;
+
+  }
+}
+
+#header.fixed {
+  .logo__white {
+    opacity: 0;
+    visibility: hidden;
+
+  }
+
+  .logo__black {
+    opacity: 1;
+    visibility: visible;
+
+  }
+}
+
+.container.logo__container {
+  position: relative !important;
+  z-index: 9999;
+}
