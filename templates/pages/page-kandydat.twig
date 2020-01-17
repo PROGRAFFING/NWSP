@@ -9,8 +9,7 @@
 
 			<h2 class="t-big">Podejmij swój wybór świadomie</h2>
 			<p class="t-p--serif t-5 t-italic">
-				Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole, jest przekonanie się na własne oczy.
-																																																Przyjdź i spotkaj się z nami podczas naszych następnych dni otwartych!</p>
+				Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole, jest przekonanie się na własne oczy.Przyjdź i spotkaj się z nami podczas naszych następnych dni otwartych!</p>
 			<a href="#" class="btn btn--white">Razem po sukces
 				<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 			</a>
@@ -29,16 +28,220 @@
 		{% endblock %}
 	{% endembed %}
 
+	<div class="u-gray">
 
-	{% include 'breadcrumbs.twig' %}
-	<section class="kierunki kierunki--kandydat u-gray">
-		<div class="container kierunki__container">
-			<h2 class="section-title about__heading t-title" data-aos="fade-down-short" data-aos-duration="1000">
-				Nasze Kierunki
-			</h2>
-			<div class="row kierunki__row" data-aos="fade-down-short" data-aos-duration="1000">
-				{% include "menu-kierunki.twig" with {'items': menu_kierunki.get_items} %}
-				<div class="kierunki__img" style="background: url({{ theme.path }}/static/img/study.jpg) center/cover "></div>
+		{% include 'breadcrumbs.twig' %}
+		<section class="kierunki kierunki--kandydat">
+			<div class="container kierunki__container">
+				<h2 class="section-title about__heading t-title" data-aos="fade-down-short" data-aos-duration="1000">
+					Nasze Kierunki
+				</h2>
+				<div class="row kierunki__row" data-aos="fade-down-short" data-aos-duration="1000">
+					{% include "menu-kierunki.twig" with {'items': menu_kierunki.get_items} %}
+					<div class="kierunki__img" style="background: url({{ theme.path }}/static/img/study.jpg) center/cover "></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="kandydat">
+			<div class="container kandydat__container">
+				<div class="row kandydat__row ">
+					<div class="col-xs-12 col-md-10 about__col about__col--left">
+						<h2 class="section-title about__heading t-title t-title--accent" data-aos="fade-down-short" data-aos-duration="1000">
+							Przyszłym kandydatom
+						</h2>
+						<p class="t-2 t-extra t-subtitle" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="300">Dołącz do NWSP w Białystok</p>
+						<div class="row about__inner-row t-p--serif">
+							<div class="col-lg-12 about__inner-col" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="600">
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, consectetur ea, culpa fugit rerum voluptatum qui quibusdam.</p>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="row kandydat__row kandydat__row-intro-more">
+
+					<div class="col-xs-12 col-md-8 kandydat__intro" data-aos="fade-down-short" data-aos-duration="1000">
+						<p class="t-p--serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, praesentium odit soluta inventore nobis nihil perspiciatis exercitationem sed saepe. Numquam deleniti, mollitia incidunt culpa odio sequi quis porro enim, veniam ipsam magni assumenda repellat provident illum deserunt maxime. Illo porro labore itaque ullam necessitatibus beatae cum similique fugiat magnam rem.</p>
+						<p class="t-p--serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, praesentium odit soluta inventore nobis nihil perspiciatis exercitationem sed saepe. Numquam deleniti, mollitia incidunt culpa odio sequi quis porro enim, veniam ipsam magni assumenda repellat provident illum deserunt maxime. Illo porro labore itaque ullam necessitatibus beatae cum similique fugiat magnam rem.</p>
+						<a href="#" class="t-link t-link--accent">Kształtuj swoją przyszłość
+							<i class="fa fa-external-link" aria-hidden="true"></i>
+						</a>
+					</div>
+
+					<div class="col-xs-12 col-md-4 kandydat__intro-img" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="300">
+						<div class="about-intro__img-inner" style='background: url("{{ theme.path }}/static/img/rekrutacja.jpg ") center /cover'></div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="requirements">
+			<div class="container requirements__container">
+				<div class="row requirements__row"></div>
+				<div class="col-xs-12 col-md-9">
+					<h2 class="t-2 t-extra t-subtitle" data-aos="fade-down-short" data-aos-duration="1000">Czego oczekujemy od naszych przyszłych studentów?</h2>
+				</div>
+				<div class="row requirements__row requirements__row--icons text-center">
+					<div class="col-xs-12 col-sm-6 col-md-3 requirements__col">
+						<div class="requirements__inner">
+							<div class="requirements__icon-wrapper">
+								<img src="{{ theme.path }}/static/img/think.png" alt="">
+							</div>
+							<div class="requirements__title">
+								<h4>Inspirowanie innych</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 requirements__col">
+						<div class="requirements__inner">
+							<div class="requirements__icon-wrapper">
+								<img src="{{ theme.path }}/static/img/think.png" alt="">
+							</div>
+							<div class="requirements__title">
+								<h4>Inspirowanie innych</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 requirements__col">
+						<div class="requirements__inner">
+							<div class="requirements__icon-wrapper">
+								<img src="{{ theme.path }}/static/img/think.png" alt="">
+							</div>
+							<div class="requirements__title">
+								<h4>Inspirowanie innych</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 requirements__col">
+						<div class="requirements__inner">
+							<div class="requirements__icon-wrapper">
+								<img src="{{ theme.path }}/static/img/think.png" alt="">
+							</div>
+							<div class="requirements__title">
+								<h4>Inspirowanie innych</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row requirements__row requirements__row--icons text-center">
+					<div class="col-xs-12 col-sm-6 col-md-4 requirements__col">
+						<div class="requirements__inner">
+							<div class="requirements__icon-wrapper">
+								<img src="{{ theme.path }}/static/img/think.png" alt="">
+							</div>
+							<div class="requirements__title">
+								<h4>Inspirowanie innych</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 requirements__col">
+						<div class="requirements__inner">
+							<div class="requirements__icon-wrapper">
+								<img src="{{ theme.path }}/static/img/think.png" alt="">
+							</div>
+							<div class="requirements__title">
+								<h4>Inspirowanie innych</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 requirements__col">
+						<div class="requirements__inner">
+							<div class="requirements__icon-wrapper">
+								<img src="{{ theme.path }}/static/img/think.png" alt="">
+							</div>
+							<div class="requirements__title">
+								<h4>Inspirowanie innych</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+	<section class="process">
+		<div class="container process__container">
+			<div class="row process__row">
+				<h2 class="section-title about__heading t-title" data-aos="fade-down-short" data-aos-duration="1000">
+					Proces aplikacji
+				</h2>
+			</div>
+			<div class="row process__row process__row--steps text-center">
+
+				<div class="col-xs-12 col-md-3 process__col process__col--1">
+					<span class="step">01.</span>
+					<span class="step__dot" data-aos="pulse" data-aos-duration="1000"></span>
+					<div class="process__text">
+						<h4>Zgłoszenie kandydatury</h4>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-3 process__col process__col--2">
+					<span class="step" data-aos="line" data-aos-duration="1000" data-aos-delay="600">02.</span>
+					<span class="step__dot" data-aos="pulse" data-aos-duration="1000"></span>
+					<div class="process__text">
+						<h4>Rozpatrywanie kandydatury</h4>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-3 process__col process__col--3">
+					<span class="step">03.</span>
+					<span class="step__dot" data-aos="pulse" data-aos-duration="1000"></span>
+					<div class="process__text">
+						<h4>Akceptacja</h4>
+						<p>Minima maiores quam porro soluta enim? Nam cumque incidunt placeat minus aut.</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-3 process__col process__col--4">
+					<span class="step step--last">04.</span>
+					<span class="step__dot" data-aos="pulse" data-aos-duration="1000"></span>
+					<div class="process__text">
+						<h4>Dostarczenie dokumentów</h4>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<section class="cta cta--big cta--kandydat">
+		<div class="cta__container" data-aos="fade-down-short" data-aos-duration="1000">
+			<img src="{{ theme.path }}/static/img/zadbamy.jpg)" alt="">
+			<a href="#" class="cta-link">
+
+
+				<div class="container">
+					<div class="row cta__row u-white">
+						<h3 class="t-1 t-extra">
+							Kształtujemy Twoją przyszłość
+						</h3>
+						<p class="t-p--medium t-p--serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo illum pariatur nam atque rem. Consequuntur, totam libero! Voluptatem, illum quasi?</p>
+						<span class="t-link t-link--white">Kształtuj swoją przyszłość
+							<i class="fa fa-external-link" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</section>
+	<section class="blog__cta blog__cta--two-col">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h3 class="blog__cta-heading t-extra t-2">Gotowy/Gotowa żeby zacząć?</h3>
+					<a href="#" class="btn btn--solid">Zapytaj o rekrutacje
+						<i class="fa fa-external-link" aria-hidden="true"></i>
+					</a>
+
+
+				</div>
 			</div>
 		</div>
 	</section>

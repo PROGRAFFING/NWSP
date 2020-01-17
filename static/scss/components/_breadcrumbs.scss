@@ -1,3 +1,18 @@
 .breadcrumbs {
     padding-top: 50px;
+
+    a,
+    strong {
+        @extend .list__link;
+        color: $main-c;
+
+        &:hover {
+            color: $text-color;
+            opacity: 1;
+        }
+    }
+
+    strong {
+        color: $text-color;
+    }
 }
