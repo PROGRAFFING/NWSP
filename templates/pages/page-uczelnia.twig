@@ -4,4 +4,123 @@
 
 	{% include 'hero.twig' %}
 
+	<section class="about about--sub u-gray">
+		<div class="container about">
+			<div class="row about__row ">
+				<div class="col-xs-12 col-md-9 about__col about__col--left">
+					<h2 class="section-title about__heading t-title t-title--accent" data-aos="fade-down-short" data-aos-duration="1000">
+						O uczelni
+					</h2>
+					<div class="row about__inner-row t-p--serif">
+						<div class="col-lg-12 about__inner-col" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="200">
+							<p class="t-p--medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, consectetur ea, culpa fugit rerum voluptatum qui quibusdam, unde aliquid reiciendis maxime dolore repellat impedit laudantium sequi sapiente aliquam? Cum, dicta?
+								<br>
+								<br>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, minus?</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row about__row about__row-intro-more">
+				<div class="col-xs-12 col-md-4 about-intro__img about-intro__img--big" data-aos="fade-down-short" data-aos-duration="1000">
+					<div class="about-intro__img-inner" style='background: url("{{ theme.path }}/static/img/rekrutacja.jpg ") center /cover'></div>
+				</div>
+				<div class="col-xs-12 col-md-8 about-intro__text" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="400">
+					<p class="t-p--serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, praesentium odit soluta inventore nobis nihil perspiciatis exercitationem sed saepe. Numquam deleniti, mollitia incidunt culpa odio sequi quis porro enim, veniam ipsam magni assumenda repellat provident illum deserunt maxime. Illo porro labore itaque ullam necessitatibus beatae cum similique fugiat magnam rem.</p>
+					<p class="t-p--serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, praesentium odit soluta inventore nobis nihil perspiciatis exercitationem sed saepe. Numquam deleniti, mollitia incidunt culpa odio sequi quis porro enim, veniam ipsam magni assumenda repellat provident illum deserunt maxime. Illo porro labore itaque ullam necessitatibus beatae cum similique fugiat magnam rem.</p>
+					<a href="#" class="t-link t-link--accent">Kształtuj swoją przyszłość
+						<i class="fa fa-external-link" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="row about__row--more">
+				<div class="col-lg-4 about__more" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="200">
+					<a href="#" class="about__more-inner">
+						<img src="{{ theme.path }}/static/img/rekrutacja.jpg" class="about__more-img" alt="">
+						<div class="about__more-text-wrapper">
+							<div class="about__more-icon"></div>
+							<h3 class="t-3">Rektrutacja do NWSP</h3>
+							<p class="about__more-small-text">Lorem ipsum dolor sit amet.</p>
+						</div>
+
+					</a>
+				</div>
+				<div class="col-lg-4 about__more about__more--plan" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="600">
+					<a href="#" class="about__more-inner">
+						<img src="{{ theme.path }}/static/img/plan-zajec.jpg" class="about__more-img" alt="">
+						<div class="about__more-text-wrapper">
+							<div class="about__more-icon"></div>
+							<h3 class="t-3">Plan zajęć</h3>
+							<p class="about__more-small-text">Lorem ipsum dolor sit amet dolor sit amet.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 about__more" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="900">
+					<a href="#" class="about__more-inner">
+						<img src="{{ theme.path }}/static/img/rekrutacja.jpg" class="about__more-img" alt="">
+						<div class="about__more-text-wrapper">
+							<div class="about__more-icon"></div>
+							<h3 class="t-3">Rektrutacja do NWSP</h3>
+							<p class="about__more-small-text">Lorem ipsum dolor sit amet.</p>
+						</div>
+
+					</a>
+				</div>
+
+
+			</div>
+
+		</div>
+	</section>
+	<section class="featured-posts u-gray featured-posts--about">
+
+		<div class="container featured__container" data-aos="fade-down-short" data-aos-duration="1000">
+			<h2 class="section-title about__heading t-title t-title--accent" data-aos="fade-down-short" data-aos-duration="1000">
+				Ostatnie wpisy
+			</h2>
+			<p class="t-p--medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, consectetur ea, culpa fugit rerum voluptatum qui quibusdam.</p>
+			<div class="row featured__row">
+				{% for item in post %}
+					<div class="col-xs-12 col-md-6 featured_col">
+						<a href="{{ item.link }}">
+							<img class="img-fluid" src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}">
+						</a>
+						<div class="featured__heading">
+							<a href="{{ item.link }}">
+								<h4 class="t-title t-title--small">
+									{{ item.title }}
+								</h4>
+							</a>
+							<p class="t-p-serif">{{ item.preview.length(20).force.read_more('<span class="t-link">Czytaj więcej</span>') }}</p>
+						</div>
+					</div>
+				{% endfor %}
+
+			</div>
+			<div class="post__btn-wrapper">
+				<a href="#" class="btn btn--accent">Zobacz wszystkie wpisy</a>
+			</div>
+		</div>
+	</section>
+	<section class="cta cta--big cta--about">
+		<div class="container cta__container" data-aos="fade-down-short" data-aos-duration="1000">
+			<img src="{{ theme.path }}/static/img/zadbamy.jpg)" alt="">
+			<a href="#" class="cta-link">
+
+
+				<div class="row cta__row u-white">
+					<h3 class="t-1 t-extra">
+						Sprawdź nasze wydawnictwo
+					</h3>
+					<p class="t-p--medium t-p--serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo illum pariatur nam atque rem. Consequuntur, totam libero! Voluptatem, illum quasi?</p>
+
+				</div>
+			</a>
+		</div>
+	</section>
+
+
 {% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	{% embed 'hero.twig' %}
+
+
+		{% block heroText %}
+
+			<h2 class="t-big">Podejmij swój wybór świadomie</h2>
+			<p class="t-p--serif t-5 t-italic">
+				Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole, jest przekonanie się na własne oczy.
+																																																Przyjdź i spotkaj się z nami podczas naszych następnych dni otwartych!</p>
+			<a href="#" class="btn btn--white">Razem po sukces
+				<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+			</a>
+		{% endblock %}
+		{% block heroExtraCol %}
+			<div class="container hero__link-container">
+				<div class="hero__link-col" data-aos="fade-in" style="background: url({{ theme.path }}/static/img/e-learning_nwsp.jpg) center / cover">
+					<a href="#" class="hero__link">
+						<h3 class="t-4 t-extra">
+							Dokumenty do pobrania
+						</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquid!</p>
+					</a>
+				</div>
+			</div>
+		{% endblock %}
+	{% endembed %}
+
+
+	{% include 'breadcrumbs.twig' %}
+	<section class="kierunki kierunki--kandydat u-gray">
+		<div class="container kierunki__container">
+			<h2 class="section-title about__heading t-title" data-aos="fade-down-short" data-aos-duration="1000">
+				Nasze Kierunki
+			</h2>
+			<div class="row kierunki__row" data-aos="fade-down-short" data-aos-duration="1000">
+				{% include "menu-kierunki.twig" with {'items': menu_kierunki.get_items} %}
+				<div class="kierunki__img" style="background: url({{ theme.path }}/static/img/study.jpg) center/cover "></div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

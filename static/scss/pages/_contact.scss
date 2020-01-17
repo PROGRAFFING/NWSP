@@ -1,0 +1,137 @@
+//  header
+
+
+.page-id-208 {
+    .nav__container {
+        background: #fff;
+    }
+
+    #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1>li.mega-menu-item.mega-current-menu-item>a.mega-menu-link,
+    #mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1>li.mega-menu-item>a.mega-menu-link {
+        color: $text-color;
+    }
+
+    .logo__white {
+        opacity: 0;
+    }
+
+    .logo__black {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.contact {
+    padding: 150px 0 50px;
+
+    .section-title {
+        margin-bottom: 80px;
+    }
+
+    .t-subtitle {
+
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+}
+
+.contact-info {
+    margin-top: 50px;
+}
+
+.contact-info__span,
+.contact-item {
+    position: relative;
+    padding-left: 35px;
+
+    img {
+        position: absolute;
+        left: 0px;
+        width: 25px;
+    }
+
+}
+
+.contact-item--open-hours {
+    padding-left: 0;
+}
+
+.contact__bank-account {
+    strong {
+        color: $main-c;
+    }
+
+}
+
+.contact-info__row {
+    margin-bottom: 30px;
+}
+
+.contact-info__wrapper {
+    background: #fff;
+    border-radius: 3px;
+    padding: 5px 20px;
+    height: 100%;
+
+    .t-title {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+
+.contact-list,
+.contact__list--details {
+    padding: 0;
+    margin: 20px 0 20px 0;
+    list-style-type: none;
+}
+
+.contact-item.contact-item--open-hours {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.contact-info__col--hours {
+    // p {
+    //     margin-bottom: 10px;
+    // }
+
+    // .t-title {
+    //     margin-bottom: 10px;
+    // }
+
+    // .contact-list {
+    //     margin-top: 0;
+    // }
+}
+
+.contact__days {
+    width: 60%;
+}
+
+.contact-info__span,
+.contact-item {
+    margin-bottom: 10px;
+    font-size: 13px;
+
+    p {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    img {
+        margin-right: 8px;
+    }
+}
+
+.contact-info__span {
+    display: block;
+}
+
+.contact-info__col--kwestura {
+    .contact-list {
+        width: 50%;
+    }
+}

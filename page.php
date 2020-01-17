@@ -21,6 +21,9 @@
  * @since    Timber 0.1
  */
 
+
+
+ 
 $context = Timber::context();
 
 $featured = Timber::get_posts(array('post_type' => 'post', 'category_name' => 'wyroznione', 'posts_per_page' =>  2)); // uses 
@@ -28,14 +31,10 @@ $featured = Timber::get_posts(array('post_type' => 'post', 'category_name' => 'w
 
 
 $timber_post     = new Timber\Post();
-$context['post'] = $timber_post;
+$context['post'] =Timber::get_posts(array('post_type' => 'post', "posts_per_page" => 2));
 $context['featured'] = $featured;
 
-$argsQuery = array(
-    'posts_per_page'   => 6,
-    'post_type'        => 'posts',
-    'category__not_in' =>  2,
-);
+
 $context['posts'] = Timber::get_posts(array('post_type' => 'post', 'posts_per_page' =>  6, 'category__not_in' => 2));
 
 Timber::render( array( 'pages/page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

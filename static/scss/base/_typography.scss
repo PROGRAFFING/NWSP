@@ -75,6 +75,11 @@ small,
   font-style: italic;
 }
 
+.t-subtitle {
+  @extend .t-2;
+  text-transform: uppercase;
+}
+
 .t-title {
   font-size: 3.4rem;
   text-transform: uppercase;
@@ -84,6 +89,25 @@ small,
   &--small {
     font-size: 1.1rem;
   }
+
+  &--accent {
+    display: block;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      width: 40px;
+      height: 2px;
+      background: $main-c;
+    }
+  }
+}
+
+.about__heading.t-title--accent {
+  margin-bottom: 100px;
 }
 
 p {

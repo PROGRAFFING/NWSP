@@ -14,10 +14,10 @@
 @import "layout/header", "layout/footer";
 
 // 5. Components
-@import "components/button", "components/hero", "components/slider", "components/slider-cta", "components/discover-cta", "components/blog-cta", 'components/kierunki-menu';
+@import "components/button", "components/hero", "components/breadcrumbs", "components/slider", "components/slider-cta", "components/discover-cta", "components/blog-cta", 'components/kierunki-menu';
 
 // 6. Page-specific styles
-@import "pages/home";
+@import "pages/home", "pages/about", "pages/contact", 'pages/kandydat';
 
 // 7. Themes
 @import "themes/default";
