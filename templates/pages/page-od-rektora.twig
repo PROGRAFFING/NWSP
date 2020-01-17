@@ -1,0 +1,121 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{% embed 'hero.twig' %}
+
+
+		{% block heroText %}
+
+			<h2 class="t-big">Podejmij swój wybór świadomie</h2>
+			<p class="t-p--serif t-5 t-italic">
+				Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole, jest przekonanie się na własne oczy.Przyjdź i spotkaj się z nami podczas naszych następnych dni otwartych!</p>
+
+		{% endblock %}
+
+	{% endembed %}
+	{% include 'breadcrumbs.twig' %}
+
+	<section class="rektor">
+		<div class="container rektor__container">
+			<div class="row rektor__row">
+				<div class="col-12">
+					<h2 class="section-title rektor__heading t-title t-title--accent" data-aos="fade-down-short" data-aos-duration="1000">
+						Od rektora
+					</h2>
+				</div>
+
+			</div>
+			<div class="row rektor__row rektor__row-intro-more">
+
+				<div class="col-xs-12 col-md-8 rektor__intro" data-aos="fade-down-short" data-aos-duration="1000">
+					<p class="t-p--serif t-bold">Szanowni Państwo – kandydaci na studia wyższe</p>
+					<p>Wybór kierunku studiów to odpowiedzialna decyzja. Może ona wpłynąć na funkcjonowanie młodego człowieka przez najbliższe lata, może decydować też o późniejszym wyborze zawodu. Decyzja taka zatem wymaga głębokiego przemyślenia. Wybór kierunku studiów to podstawowa sprawa, ale niezmiernie ważne jest to, na jakiej uczelni ma być realizowane to kształcenie.
+						<br>
+						Niepaństwowa Wyższa Szkoła Pedagogiczna w Białymstoku stwarza optymalne warunki do rozwoju naukowego i osobistego. Oto jej największe atuty:
+						<br>
+
+						<h4 class="t-3 t-extra">Współpracujemy z najlepszymi</h4>
+					</p>
+					<p>NWSP to profesjonalna, polska i międzynarodowa kadra nauczycieli akademickich. Dobierając wykładowców do prowadzenia zajęć dydaktycznych na naszej Uczelni kierowaliśmy się nie tylko profesjonalizmem i doświadczeniem zawodowym kadry, ale kładliśmy szczególny nacisk na ich walory osobowościowe:
+						<ul class="list rektor__list rektor__list--icons">
+							<li>
+								<img src="{{ theme.path }}/static/img/conversation.png" alt="">
+								Komunikatywność
+							</li>
+							<li>
+								<img src="{{ theme.path }}/static/img/smile.png" alt="">
+								Życzliwość w stosunku do studentów</li>
+							<li>
+								<img src="{{ theme.path }}/static/img/peace.png" alt="">
+								Niekonfliktowy sposób bycia</li>
+						</ul>
+					</p>
+					<p>Dobraliśmy kadrę, dla której nauczanie jest nie tylko obowiązkiem zawodowym, ale przede wszystkim pasją. To gwarantuje jakość nauczania na najwyższym poziomie.</p>
+					<h4 class="t-3 t-extra">Stawiamy na rozwój</h4>
+					<p>Niepaństwowa Wyższa Szkoła Pedagogiczna jest Uczelnią rozwijającą się prężnie, oferującą humanistyczne kierunki kształcenia najbardziej cenione i pożądane w naszej gospodarce, takie jak:</p>
+					<ul class="list rektor__list rektor__list--kierunki">
+						<li>
+							<a href="#">pedagogika</a>
+						</li>
+						<li>
+							<a href="#">psychologia</a>
+						</li>
+						<li>
+							<a href="#">bezpieczeństwo wewnętrzne</a>
+						</li>
+						<li>
+							<a href="#">administracja</a>
+						</li>
+						<li>
+							<a href="#">pedagogika przedszkolna i wczesnoszkna</a>
+						</li>
+						<li>
+							<a href="#">liczne i stałe powiększające sie kierunki kształcenia podyplomowego</a>
+						</li>
+					</ul>
+					<p>Uczelnia otworzyła i rozwija placówki oświatowe, takie jak: szkoła podstawowa, przedszkole, stwarzając dogodne miejsca pracy wybranym absolwentom. Kierownictwo Uczelni dokłada wszelkich starań, by iść "z duchem czasu" i podejmować najbardziej nawet trudne wyzwania edukacyjne. Oferta kierunków kształcenia stałe jest rozbudowywana i uaktualniana.</p>
+
+					<h4 class="t-3 t-extra">Spełniamy wasze oczekiwania!</h4>
+				</p>
+				<p>Niepaństwowa Wyższa Szkoła Pedagogiczna w Białymstoku działa na podstawie decyzji Ministerstwa Nauki i Szkolnictwa Wyższego nadającej uprawnienia do prowadzenia studiów na wszystkich kierunkach. Jako Rektor NWSP jestem przekonany, że oferta programowa naszej Uczelni spełnia oczekiwania nawet najbardziej wymagających studentów i stanowi przepustkę do bogatszego i dojrzalszego życia zawodowego i osobistego. To przekonanie oparte jest na bardzo pozytywnej ocenie ze strony pracodawców, którzy zatrudniają absolwentów naszej uczelni. Tej decyzji nie będziecie Państwo żałować.</p>
+
+
+				<a href="#" class="t-link t-link--accent">Kształtuj swoją przyszłość
+					<i class="fa fa-external-link" aria-hidden="true"></i>
+				</a>
+			</p>
+		</div>
+
+		<div class="col-xs-12 col-md-4 rektor__intro-img " data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="300">
+			<div class="about-intro__img-inner" style='background: url("{{ theme.path }}/static/img/rektor.jpg ") center /cover'></div>
+			<h4>Serdecznie zapraszam w mury naszej Uczelni.</h4>
+			<p class="t-serif">Rektor, dr Marek Jasiński, prof. NWSP</p>
+		</div>
+	</div>
+</div></section><section class="rektor__choose">
+<div class="container choose__container">
+	<div class="row rektor__row--more">
+		<div class="col-lg-6 about__more" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="200">
+			<a href="#" class="about__more-inner">
+				<img src="{{ theme.path }}/static/img/rekrutacja.jpg" class="about__more-img" alt="">
+				<div class="about__more-text-wrapper">
+
+					<h3 class="t-2">Władze</h3>
+					<p class="about__more-small-text">Lorem ipsum dolor sit amet.</p>
+				</div>
+
+			</a>
+		</div>
+		<div class="col-lg-6 about__more about__more--plan" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="600">
+			<a href="#" class="about__more-inner">
+				<img src="{{ theme.path }}/static/img/plan-zajec.jpg" class="about__more-img" alt="">
+				<div class="about__more-text-wrapper">
+					<h3 class="t-2">Pracownicy</h3>
+					<p class="about__more-small-text">Lorem ipsum dolor sit amet dolor sit amet.</p>
+				</div>
+			</a>
+		</div>
+
+
+	</div>
+</div></section>{% endblock %}
