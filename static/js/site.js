@@ -37,8 +37,8 @@ jQuery(document).ready(function($) {
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 1
-    // lazyLoad: "progressive",
+    slidesToShow: 1,
+    lazyLoad: "progressive"
     // cssEase: "cubic-bezier(.89,0,.34,.86)"
   });
 
@@ -122,4 +122,3 @@ function hoverOut() {
 //     magicLine.style.setProperty("width", `${directions.width}px`);
 //   });
 // });
-

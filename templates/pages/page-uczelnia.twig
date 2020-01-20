@@ -3,7 +3,7 @@
 {% block content %}
 
 	{% include 'hero.twig' %}
-
+	{% include 'breadcrumbs.twig' %}
 	<section class="about about--sub u-gray">
 		<div class="container about">
 			<div class="row about__row ">
@@ -83,7 +83,7 @@
 			</h2>
 			<p class="t-p--medium">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, consectetur ea, culpa fugit rerum voluptatum qui quibusdam.</p>
 			<div class="row featured__row">
-				{% for item in post %}
+				{% for item in favourite %}
 					<div class="col-xs-12 col-md-6 featured_col">
 						<a href="{{ item.link }}">
 							<img class="img-fluid" src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}">
