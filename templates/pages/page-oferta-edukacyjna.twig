@@ -1,0 +1,53 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="no-hero"></div>
+	{% include 'breadcrumbs.twig' %}
+	<div class="container kierunki__container">
+		<h2 class="section-title about__heading t-title--space-off t-title t-title--accent" data-aos="fade-down-short" data-aos-duration="1000">
+			Nasze Kierunki
+		</h2>
+	</div>
+	<section class="kierunki u-gray">
+		<div class="container kierunki__container">
+			<h3 class="section-title directions__heading t-3 t-extra" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="200">
+				Lorem ipsum dolor sit amet consectetur adipisicing?
+			</h3>
+			<p class="t-p--medium" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="400">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti aut ab repudiandae pariatur reprehenderit nobis omnis saepe illo dicta at!</p>
+			<div class="row kierunki__row" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="600">
+				{% include "menu-kierunki.twig" with {'items': menu_kierunki.get_items} %}
+				<div class="kierunki__img" style="background: url({{ theme.path }}/static/img/study.jpg) center/cover "></div>
+			</div>
+		</div>
+	</section>
+	<section class="blog__cta">
+		<div class="container" data-aos="fade-down-short" data-aos-duration="1000">
+			<div class="row">
+				<div class="col-xs-12 col-md-6 offset-md-3 text-center">
+					<i class="fa fa-rocket" aria-hidden="true"></i>
+
+					<h3 class="blog__cta-heading t-extra t-2">Odwiedź nasz blog!</h3>
+					<p class="blog__cta-desc t-p--serif t-p--medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consequatur!</p>
+					<a href="#" class="btn btn--solid">Blog
+						<i class="fa fa-external-link" aria-hidden="true"></i>
+					</a>
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="container">
+		<h2 class="section-title testimonials__heading t-title--space-off t-title t-title--accent" data-aos="fade-down-short" data-aos-duration="1000">
+			Opinie
+		</h2>
+	</div>
+	<section class="testimonials" style="background: url({{ theme.path }}/static/img/study.jpg) center/cover ">
+		<div class="container">
+			<div class="row align-items-center">
+				{{function('do_shortcode', '[testimonial_view id="1"]') }}
+			</div>
+		</div>
+	</section>
+{% endblock %}

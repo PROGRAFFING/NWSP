@@ -1,0 +1,110 @@
+.page-id-156 {
+    background: $light-gray;
+
+}
+
+.kierunki {
+    margin-bottom: 100px;
+}
+
+
+.kierunki__container {
+    h2 {
+        margin-top: 20px;
+    }
+
+    .directions__heading {
+        text-transform: uppercase;
+    }
+
+    .kierunki__row {
+        margin-top: 50px;
+    }
+}
+
+.testimonials {
+    .container {
+        padding: 100px 0;
+    }
+}
+
+.testimonials__heading {
+    margin: 50px 0 70px;
+}
+
+.testimonial-inner {
+    border-radius: 3px;
+    padding: 20px 40px 40px;
+    background: #fff;
+    opacity: 0.95;
+}
+
+.testimonial-image {
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.testimonial-name {
+    font-weight: 800;
+    position: relative;
+    color: $text-color;
+    padding-left: 20px;
+    margin-top: 20px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 15px;
+        height: 1px;
+        background: $text-color;
+    }
+}
+
+.testimonial-image {
+    display: none;
+}
+
+.testimonial-content {
+
+    div:nth-child(3) {
+        position: relative;
+        display: block;
+        width: 90%;
+        margin-top: 80px;
+        font-family: $second-font;
+        font-style: italic;
+        font-size: 1.4rem;
+        overflow-wrap: break-word;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -60px;
+            width: 64px;
+            height: 64px;
+            background: url('./../img/quote.svg') center / cover;
+        }
+    }
+
+}
+
+.wpmslider-prev,
+.wpmslider-next {
+    color: #fff !important;
+
+    &:before {
+        content: '\f105' !important;
+        font-size: 40px;
+    }
+}
+
+.wpmslider-prev {
+    &:before {
+        content: '\f104' !important;
+    }
+}
