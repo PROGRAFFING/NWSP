@@ -1,0 +1,26 @@
+.hero-directions {
+    height: 60vh;
+
+    .hero__item {
+        height: 100%;
+    }
+
+    .hero__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .breadcrumbs {
+        background: transparent;
+        text-align: center;
+
+        * {
+            color: #fff !important;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

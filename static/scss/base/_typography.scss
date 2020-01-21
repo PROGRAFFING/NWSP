@@ -75,6 +75,11 @@ small,
   font-style: italic;
 }
 
+.t-number {
+  color: $main-c;
+  margin-right: 10px;
+}
+
 .t-subtitle {
   @extend .t-2;
   text-transform: uppercase;
@@ -130,6 +135,10 @@ p {
   font-family: $second-font;
 }
 
+.t-p--alert {
+  // text-decoration: underline;
+}
+
 .t-link {
   color: $main-c;
   font-weight: 800;
@@ -159,4 +168,13 @@ p {
     margin-left: 5px;
     transition: $transition;
   }
+}
+
+
+.t-underline {
+  padding: 0 8px;
+  position: relative;
+  color: #fff;
+  background: $main-c;
+
 }

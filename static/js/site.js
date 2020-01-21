@@ -49,13 +49,28 @@ jQuery(document).ready(function($) {
     slidesToShow: 1
   });
 
-  $(window).bind("scroll", function() {
-    if ($(window).scrollTop() > 60) {
-      $(".header").addClass("fixed");
-    } else {
-      $(".header").removeClass("fixed");
-    }
-  });
+  if (!($(".hero-directions").length > 0)) {
+    // exists.
+    $(window).bind("scroll", function() {
+      if ($(window).scrollTop() > 60) {
+        $(".header").addClass("fixed");
+      } else {
+        $(".header").removeClass("fixed");
+      }
+    });
+  }
+  if ($(".hero-directions").length > 0) {
+    var s = $(".direction__nav");
+    var pos = s.position();
+    $(window).scroll(function() {
+      var windowpos = $(window).scrollTop();
+      if (windowpos >= pos.top) {
+        s.addClass("stick");
+      } else {
+        s.removeClass("stick");
+      }
+    });
+  }
 
   const menu = document.querySelectorAll(
     "#mega-menu-max_mega_menu_1 .mega-has-child"
