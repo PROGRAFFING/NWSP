@@ -207,4 +207,12 @@ function zeno_font_resizer_place_shortcode() {
 }
 add_shortcode('zeno_font_resizer', 'zeno_font_resizer_place_shortcode');
 
+function add_file_types_to_uploads($file_types){
+	$new_filetypes = array();
+	$new_filetypes['svg'] = 'image/svg+xml';
+	$file_types = array_merge($file_types, $new_filetypes );
+	return $file_types;
+	}
+	add_filter('upload_mimes', 'add_file_types_to_uploads');
+
 new StarterSite();

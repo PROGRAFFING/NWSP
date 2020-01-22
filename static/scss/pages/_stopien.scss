@@ -1,4 +1,4 @@
-.level__caption{
+.level__caption {
     margin-bottom: 100px;
 }
 
@@ -9,9 +9,15 @@
 
 }
 
+.level__subtitle {
+    margin-top: 0;
+}
+
 .level__list {
     margin: 50px 0;
 }
+
+.level__list-wrapper>li {}
 
 .level__list>.level__item {
     margin: 0;
@@ -32,8 +38,31 @@
 }
 
 
+.level__col-repeater {
+    margin-bottom: 30px;
+}
+
+.level__heading-repeater {
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 2rem;
+        @extend .t-bold;
+    }
+
+}
+
+.level__icon {
+    width: 50px;
+    height: 50px
+}
+
 .level__choose-row {
-    padding-bottom: 50px;
 
     .student__inner {
         padding-top: 100px;
@@ -72,4 +101,12 @@
     .t-subtitle {
         margin-bottom: 50px;
     }
+}
+
+.level__extra-info {
+    margin-top: 50px;
+}
+
+.level__note-row {
+    margin-top: 50px;
 }

@@ -33,6 +33,21 @@ ready(function() {
 const $ = jQuery;
 jQuery(document).ready(function($) {
   // Your JavaScript goes here
+
+  $("a").on("click", function(event) {
+    //check the value of this.hash
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      $("html, body").animate(
+        { scrollTop: $(this.hash).offset().top - 100 },
+        500
+      );
+
+      //add hash to the current scroll position
+      window.location.hash = this.hash;
+    }
+  });
   $(".hero__container").slick({
     dots: false,
     infinite: true,
