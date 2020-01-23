@@ -1,0 +1,58 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	{% embed 'hero-smaller.twig' %}
+
+		{% block heroText %}
+
+			<h2 class="t-big">{{ post.title }}</h2>
+			<p class="t-p--serif t-5 t-italic">
+				Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole, jest przekonanie się na własne oczy.Przyjdź i spotkaj się z nami podczas naszych następnych dni otwartych!</p>
+
+		{% endblock %}
+
+	{% endembed %}
+	{% include 'breadcrumbs.twig' %}
+	<section class="payment">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<p class="t-p--medium t-bold payment__intro">Kandydat przy składaniu podania o przyjęcie na studia musi mieć potwierdzenie wpłaty na konto Uczelni:
+					</p>
+					<ul class="list rektor__list rektor__list--kierunki">
+						<li class="t-bold">wpisowego</li>
+						<li class="t-bold">I raty czesnego oraz opłaty z legitymację</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-12">{{ function('do_shortcode', '[table id=1 /]') }}</div>
+
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<p class="t-p--medium t-bold">Opłat należy dokonywać na konto bankowe: Bank Spółdzielczy w Brańsku
+						<br>
+						Nr konta:
+						<span class="u-accent">44 8063 0001 0100 0200 7214 0001 z dopiskiem "rekrutacja+ imię i nazwisko + kierunek studiów"</span>
+					</p>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<h3 class="t-bold">Zwrot opłaty rekrutacyjnej</h3>
+					<p>Kandydatowi przysługuje – na jego wniosek – zwrot opłaty rekrutacyjnej:</p>
+					<ul class="list rektor__list rektor__list--kierunki">
+						<li>braku zapisu na kierunek studiów</li>
+						<li>gdy kierunek studiów nie został uruchomiony z powodu zbyt małej liczby kandydatów</li>
+					</ul>
+					<p class="t-bold">Decyzję w sprawie zwrotu opłaty rekrutacyjnej podejmuje Kanclerz na podstawie pisemnego, podpisanego przez kandydata podania.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

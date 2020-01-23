@@ -4,6 +4,14 @@ AOS.init({
   once: true
 });
 
+const $ = jQuery;
+$(document).ready(function() {
+  $(".page-id-193 ").scrollspy({
+    target: "#pay",
+    offset: 150
+  });
+});
+
 function ready(fn) {
   if (document.readyState !== "loading") {
     fn();
@@ -30,7 +38,6 @@ ready(function() {
   });
 });
 
-const $ = jQuery;
 jQuery(document).ready(function($) {
   // Your JavaScript goes here
 
@@ -64,7 +71,7 @@ jQuery(document).ready(function($) {
     slidesToShow: 1
   });
 
-  if (!($(".hero-directions").length > 0)) {
+  if (!($(".hero-directions, .scrollspy__nav").length > 0)) {
     // exists.
     $(window).bind("scroll", function() {
       if ($(window).scrollTop() > 60) {
@@ -74,7 +81,7 @@ jQuery(document).ready(function($) {
       }
     });
   }
-  if ($(".hero-directions").length > 0) {
+  if ($(".hero-directions, .scrollspy__nav").length > 0) {
     var s = $(".direction__nav");
     var pos = s.position();
     $(window).scroll(function() {

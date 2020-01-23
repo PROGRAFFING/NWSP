@@ -16,3 +16,11 @@
     padding-top: 200px;
     background: $light-gray;
 }
+
+.hero-smaller {
+    height: 70vh;
+
+    .hero__item {
+        height: 100%;
+    }
+}

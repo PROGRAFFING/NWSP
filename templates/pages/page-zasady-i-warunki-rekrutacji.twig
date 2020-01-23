@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+
+
+{% block content %}
+	{% embed 'hero-smaller.twig' %}
+
+		{% block heroText %}
+
+			<h2 class="t-big">{{ post.title }}</h2>
+
+		{% endblock %}
+
+	{% endembed %}
+{% endblock %}

@@ -111,16 +111,9 @@
 						<span class="t-number">1.</span>Opłaty miesięczne
 					</h4>
 					<p>Czesne za rok:</p>
-					<ul class="list rektor__list rektor__list--kierunki">
-						<li>
-							<span class="u-accent">studia stacjonarne:</span>
-							3.600 zł (płatne w 10 ratach po 360 zł)
-						</li>
-						<li>
-							<span class="u-accent">studia niestacjonarne:</span>
-							3.600 zł  (płatne w 10 ratach po 360 zł)
-						</li>
-					</ul>
+					<div class="direction__caption-wysiwyg">
+						{{ payment_monthly }}
+					</div>
 				</div>
 			</div>
 			<div class="row" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="400">
@@ -128,15 +121,18 @@
 					<h4 class="t-3 direction__subheading t-extra">
 						<span class="t-number">2.</span>Opłaty roczne
 					</h4>
-					Studenci studiów stacjonarnych i niestacjonarnych, którzy dokonują opłat do 10 października za cały rok akademicki, otrzymują zniżkę w opłacie czesnego - 200 zł.
+					{{ payment_yearly }}
 				</div>
 			</div>
-			{% if post.meta('note') is defined %}
-				<div class="row level__note-row" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="400">
-					<div class="level__note">
-						{{ post.meta('note') }}
+			{% if post.meta('ask') %}
+				{% if post.meta('note') is defined %}
+					<div class="row level__note-row" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="400">
+						<div class="level__note">
+							{{ post.meta('note') }}
+						</div>
 					</div>
-				</div>
+				{% endif %}
+
 			{% endif %}
 			<div class="row level__extra-info" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="400">
 				<div class="col-12">

@@ -1,0 +1,113 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	{% embed 'hero-smaller.twig' %}
+
+		{% block heroText %}
+
+			<h2 class="t-big">{{ post.title }}</h2>
+
+		{% endblock %}
+
+	{% endembed %}
+
+	<nav id="pay" class="navbar direction__nav scrollspy__nav">
+		<ul class="nav nav-pills">
+			<li class="nav-item">
+				<a class="nav-link" href="#beginners">Opłaty za rozpoczęcie studiów</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#continued">Opłaty za kontynucje studiów</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#documents">OPŁATY ZA WYDANIE DOKUMENTÓW</a>
+			</li>
+
+		</ul>
+	</nav>
+
+
+	{% include 'breadcrumbs.twig' %}
+	<section class="students-payments">
+		<div class="container">
+			<div class="row students-payments__row students-payments__row--first">
+				<div class="col-12">
+					<h2 class="section-title about__heading t-title t-title--accent aos-init aos-animate" data-aos="fade-down-short" data-aos-duration="1000">
+						Szanowni studenci!
+					</h2>
+					<p data-aos="fade-down-short" data-aos-duration="1000">Informujemy, że w Wirtualnym Dziekanacie w zakładce finanse (dane do przelewu) widnieje nowy numer konta<strong>
+							(indywidualny- KAŻDY STUDENT MA INNY NUMER KONTA)</strong>, na który prosimy wpłacić czesne od roku akademickiego 2019/2020.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-3 info__col info__col--danger" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="300">
+					<div class="info__col-inner alert alert-danger">
+						<img src="{{ theme.path }}/static/img/warming.png" alt="">
+						<h4 class="t-bold">UWAGA</h4>
+						<p>Dzieci studentów i pracowników NWSP w Białymstoku są zwolnione z opłaty czesnego za pobyt w Przedszkolu „Świat Zucha”.</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-3 info__col info__col--danger" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="600">
+					<div class="info__col-inner alert alert-success">
+						<img src="{{ theme.path }}/static/img/tag.png" alt="">
+						<h4 class="t-bold">ZNIŻKA</h4>
+						<p>Absolwenci NWSP studiów I stopnia (licencjackich): wpisowe na studia magisterskie dwuletnie wynosi 200 zł.</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-3 info__col info__col--danger" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="900">
+					<div class="info__col-inner alert alert-success">
+						<img src="{{ theme.path }}/static/img/tag.png" alt="">
+						<h4 class="t-bold">ZNIŻKA</h4>
+						<p>Absolwenci NWSP studiów II stopnia (magisterskich) i studenci studiujący w NWSP na dwóch kierunkach zwolnieni są z opłaty wpisowego w wysokości 400 zł.</p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-3 info__col info__col--danger" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="1200">
+					<div class="info__col-inner alert alert-success">
+						<img src="{{ theme.path }}/static/img/tag.png" alt="">
+						<h4 class="t-bold">ZNIŻKA</h4>
+						<p>
+							Studenci studiów stacjonarnych i niestacjonarnych I i II stopnia, którzy dokonują opłat za cały rok akademicki do 10 października, otrzymują zniżkę w opłacie czesnego w wysokości 200 zł (nie przysługuje studentom rozpoczynającym  naukę w r. ak. 2018/2019 i wcześniej, którzy podpisali umowę z ratami miesiecznymi)</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+	<section id="beginners">
+		<div class="container">
+			<div class="row students-payments__row students-payments__row--second">
+				<div class="col-12">
+					<p class="t-3 t-extra">OPŁATY ZA STUDIA OBOWIĄZUJĄCE STUDENTÓW ROZPOCZYNAJĄCYCH STUDIA W ROKU AKADEMICKIM 2019/2020.</p>
+				</div>
+				<div class="col-12">{{ function('do_shortcode', '[table id=2 /]') }}</div>
+			</div>
+
+		</div>
+	</section>
+	<section class="u-gray students-payments__colored" id="continued">
+		<div class="container">
+			<div class="row students-payments__row students-payments__row--third">
+				<div class="col-12">
+					<p class="t-3 t-extra">STUDENCI KONTYNUUJĄCY NAUKĘ W ROKU AKADEMICKIM 2019/2020 PONOSZĄ OPŁATĘ CZESNEGO W KWOTACH NIEZMIENNYCH DO ROKU AKADEMICKIEGO 2018/2019.</p>
+				</div>
+				<div class="col-12">{{ function('do_shortcode', '[table id=3 /]') }}</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container" id="documents">
+			<div class="row students-payments__row students-payments__row--second">
+				<div class="col-12">
+					<p class="t-3 t-extra">OPŁATY ZA WYDANIE DOKUMENTÓW W ROKU AKADEMICKIM</p>
+				</div>
+				<div class="col-12">{{ function('do_shortcode', '[table id=4 /]') }}</div>
+			</div>
+
+		</div>
+	</section>
+
+
+{% endblock %}

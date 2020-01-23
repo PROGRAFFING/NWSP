@@ -80,12 +80,15 @@
 						{% set count = count + 1 %}
 					{% endfor %}
 				</div>
-				{% if post.meta('note') is defined %}
-					<div class="row level__note-row" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="400">
-						<div class="level__note">
-							{{ post.meta('note_direction') }}
+				{% if post.meta('ask') %}
+					{% if post.meta('note') is defined %}
+						<div class="row level__note-row" data-aos="fade-down-short" data-aos-duration="1000" data-aos-delay="400">
+							<div class="level__note">
+								{{ post.meta('note') }}
+							</div>
 						</div>
-					</div>
+					{% endif %}
+
 				{% endif %}
 				<div class="col-12 col-md-4 dircetion__sidebar"></div>
 
