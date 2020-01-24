@@ -6,10 +6,17 @@ AOS.init({
 
 const $ = jQuery;
 $(document).ready(function() {
-  $(".page-id-193 ").scrollspy({
-    target: "#pay",
-    offset: 150
-  });
+  if ($("body").hasClass("page-id-193")) {
+    $("body").scrollspy({
+      target: "#pay",
+      offset: 150
+    });
+  } else if ($("body").hasClass("page-id-88")) {
+    $("body").scrollspy({
+      target: "#story",
+      offset: 150
+    });
+  }
 });
 
 function ready(fn) {

@@ -5,14 +5,21 @@
 
 		<div class="hero__wrapper container u-h-100">
 			<div class="hero__row hero__row--text">
-				{% block heroText %}
-					<h2 class="t-big">
-						Poznaj historię naszej uczelni</h2>
-					<p class="t-p--serif t-5 t-italic">
-						Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole, jest przekonanie się na własne oczy.
-																																		Przyjdź i spotkaj się z nami podczas naszych następnych dni otwartych!</p>
-				{% endblock %}
+				<div class="col-12">
+					{% block heroText %}
+						<h2 class="t-big">
+							Poznaj historię naszej uczelni</h2>
+						<p class="t-p--serif t-5 t-italic">
+							Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole, jest przekonanie się na własne oczy.
+														
+														Przyjdź i spotkaj się z nami podczas naszych następnych dni otwartych!</p>
+					{% endblock %}
+				</div>
+				<div class="col-12 hero__small-breadcrumbs">
+					{% include 'breadcrumbs.twig' %}
+				</div>
 			</div>
+
 		</div>
 		{% block heroExtraCol %}{% endblock %}
 	</div>

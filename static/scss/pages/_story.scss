@@ -1,0 +1,169 @@
+// .story__container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: column-reverse;
+// }
+.page-id-88 {
+    position: relative;
+}
+
+#story .nav {
+
+    // justify-content: space-between;
+    // flex-wrap: nowrap;
+    // flex-direction: row-reverse;
+    li:nth-child(even) {
+        border-radius: 3px;
+        background: #eee;
+    }
+
+    a {
+        transition: all .2s ease-in-out;
+
+        &:after {
+            display: none;
+        }
+
+    }
+
+}
+
+#story {
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+        background-color: $main-c;
+        color: #fff;
+    }
+}
+
+
+
+.story__row {
+    min-height: 50vh;
+    padding: 0;
+    height: 100%;
+    position: relative;
+
+    &:before {
+        content: '1995';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 200px;
+        font-weight: 800;
+        color: #f1f1f1;
+        opacity: 0.6;
+        line-height: 1;
+    }
+
+    .row {
+        height: 100%;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+}
+
+.story__container {
+
+
+    .story__row:nth-child(2n + 2) {
+        background: $main-c;
+
+        &:before {
+            color: lighten($main-c, 10);
+        }
+
+        >* {
+            color: #fff;
+        }
+
+        .list li {
+            &:before {
+                background: url(../img/tick-white.svg) center/cover;
+            }
+        }
+    }
+
+    .story__row:nth-child(4n) {
+
+        background: url(../img/slider2.jpg) center/cover;
+        z-index: 0;
+
+        >* {
+            color: #fff;
+        }
+
+        &:after {
+            @include overlay;
+            z-index: -1;
+        }
+
+        .list li {
+            &:before {
+                background: url(../img/tick-white.svg) center/cover;
+            }
+        }
+    }
+
+    .story__row:nth-child(6n+6) {
+        background: $light-gray;
+
+        >* {
+            color: $text-color;
+        }
+
+        .list li {
+            &:before {
+                background: url(../img/tick.svg) center/cover;
+            }
+        }
+
+    }
+}
+
+.story__date {
+    position: sticky;
+    top: 70px;
+}
+
+.story__date-col {
+    padding-top: 50px;
+    text-align: right;
+    border-right: 1px solid #eee;
+    height: 100%;
+}
+
+.story__content-wrapper {
+    padding: 50px 0 100px 20px;
+}
+
+.story__title {
+    font-size: 1rem;
+}
+
+
+.story__row--first {
+    padding-top: 50px;
+
+    .story__content-wrapper,
+    .story__date-col {
+        padding-top: 0;
+    }
+}
+
+.story__row--color {
+    background: $main-c;
+
+    >* {
+        color: #fff;
+    }
+
+    .list li {
+        &:before {
+            background: url(../img/tick-white.svg) center/cover;
+        }
+    }
+}

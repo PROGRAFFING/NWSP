@@ -1,0 +1,22 @@
+.rekrutacja {
+    .section-title {
+        margin-top: 50px;
+    }
+
+    &__wybor {
+        margin: 50px 0 100px;
+    }
+}
+
+.kierunki--rekrutacja {
+    margin-bottom: 0;
+    padding: 50px 0 150px;
+}
+
+.rekrutacja__row--second {
+    margin: 50px 0 100px;
+
+    .contact-info__wrapper {
+        background: $light-gray;
+    }
+}

@@ -17,7 +17,7 @@
 @import "components/button", "components/hero-kierunek", "components/hero", "components/breadcrumbs", "components/slider", "components/slider-cta", "components/discover-cta", "components/blog-cta", 'components/kierunki-menu';
 
 // 6. Page-specific styles
-@import "pages/home", "pages/about", "pages/kierunki", "pages/payment", "pages/platnosci", "pages/stopien", "pages/kierunek", "pages/contact", 'pages/kandydat', 'pages/od-rektora', 'pages/studenci';
+@import "pages/home", "pages/about", "pages/kierunki", 'pages/story', "pages/zasady-warunki", "pages/payment", "pages/platnosci", "pages/stopien", "pages/kierunek", "pages/contact", 'pages/kandydat', 'pages/od-rektora', 'pages/studenci', 'pages/rekrutacja';
 
 // 7. Themes
 @import "themes/default";

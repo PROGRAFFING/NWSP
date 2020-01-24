@@ -1,18 +1,12 @@
 {% extends "base.twig" %}
 
 {% block content %}
-
-	{% embed 'hero.twig' %}
-
+	{% embed 'hero-smaller.twig' %}
 
 		{% block heroText %}
 
-			<h2 class="t-big">Podejmij swój wybór świadomie</h2>
-			<p class="t-p--serif t-5 t-italic">
-				Najlepszym sposobem, aby dowiedzieć się, jak wyglądałoby studiowanie w naszej szkole, jest przekonanie się na własne oczy.Przyjdź i spotkaj się z nami podczas naszych następnych dni otwartych!</p>
-			<a href="#" class="btn btn--white">Razem po sukces
-				<i class="fa fa-graduation-cap" aria-hidden="true"></i>
-			</a>
+			<h2 class="t-big">{{ post.title }}</h2>
+
 		{% endblock %}
 		{% block heroExtraCol %}
 			<div class="container hero__link-container">
@@ -28,9 +22,8 @@
 		{% endblock %}
 	{% endembed %}
 
-	<div class="u-gray">
 
-		{% include 'breadcrumbs.twig' %}
+	<div class="u-gray">
 		<section class="kierunki kierunki--kandydat">
 			<div class="container kierunki__container">
 				<h2 class="section-title about__heading t-title" data-aos="fade-down-short" data-aos-duration="1000">

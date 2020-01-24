@@ -1,9 +1,16 @@
 {% extends "base.twig" %}
 
 {% block content %}
+	{% embed 'hero-smaller.twig' %}
 
-	{% include 'hero.twig' %}
-	{% include 'breadcrumbs.twig' %}
+		{% block heroText %}
+
+			<h2 class="t-big">{{ post.title }}</h2>
+
+		{% endblock %}
+
+	{% endembed %}
+
 	<section class="about about--sub u-gray">
 		<div class="container about">
 			<div class="row about__row ">
