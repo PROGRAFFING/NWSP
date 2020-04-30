@@ -14,7 +14,7 @@
   "dependencies": {
     "accessibility-buttons": "^3.1.2",
     "gulp-sass": "^4.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "nunjucks": "^3.2.0",
     "sass-mq": "^5.0.1"
   },
